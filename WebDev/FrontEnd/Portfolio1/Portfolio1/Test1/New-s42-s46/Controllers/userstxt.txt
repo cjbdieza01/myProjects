@@ -1,0 +1,12 @@
+{
+    "email" : "juan@email.com",
+    "password" : "juan1234",
+    "isAdmin" : false
+}
+
+Admin
+{
+    "email" : "pedro@email.com",
+    "password" : "pedro1234",
+    "isAdmin" : true
+}
