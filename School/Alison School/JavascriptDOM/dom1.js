@@ -1,1 +1,0 @@
-const myEle1 = document.querySelector('.myElem');
