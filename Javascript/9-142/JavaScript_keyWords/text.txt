@@ -1,0 +1,50 @@
+In JavaScript, reserved keywords are words that have special meanings and are reserved for specific purposes within the language. These keywords cannot be used as identifiers (such as variable names, function names, or object properties) because they are already predefined with specific functionalities.
+
+Reserved keywords are an essential part of the language's syntax and have specific rules associated with them. They are used to define control structures, data types, loops, conditional statements, and other language constructs.
+
+Using reserved keywords as identifiers will result in a syntax error in JavaScript. Therefore, it is important to avoid using them as variable names, function names, or other identifiers in your code.
+
+For example, the keyword `function` is used to define a function in JavaScript, so you cannot use it as a variable name:
+
+```javascript
+// Incorrect usage of a reserved keyword as an identifier
+var function = 10; // Syntax error
+```
+
+To avoid conflicts and ensure code readability, it is recommended to choose meaningful and descriptive names for variables, functions, and other identifiers that do not clash with the reserved keywords of JavaScript.
+
+Here are some Javascript reserved keywords
+JavaScript keyWords
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+export
+extends
+finally
+for
+function
+if
+import
+in
+instanceof
+new
+return
+super
+switch
+this
+throw
+try
+typeof
+var
+void
+while
+with
+yield
