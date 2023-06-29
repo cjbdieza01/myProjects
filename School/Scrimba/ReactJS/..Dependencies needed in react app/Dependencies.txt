@@ -38,3 +38,16 @@ I hope this helps you get started with React.js! Let me know if you have any fur
 
 Router
 npm install react-router-dom
+
+Step-by-step
+npm install -g create-react-app
+npx create-react-app my-app
+
+Commands
+npm start - Starts the development server.
+npm run build - Bundles the app into static files for production
+npm test - starts the test runner
+npm run eject - removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can't go back
+Suggested to begin by typing:
+cd my-app
+npm start
