@@ -1,0 +1,38 @@
+To use Bootstrap with React.js, you need to install both the React Bootstrap library and the Bootstrap CSS framework. Here are the dependencies and the corresponding commands to install them using PowerShell:
+
+1. React Bootstrap: React Bootstrap is a library that provides Bootstrap components as React components. To install it, open PowerShell and navigate to your React.js project directory (where you previously created your React app). Then run the following command:
+
+   ```
+   npm install react-bootstrap@next bootstrap
+   ```
+
+   This command installs the latest version of React Bootstrap along with the Bootstrap CSS framework.
+
+2. Bootstrap CSS: React Bootstrap relies on the Bootstrap CSS framework to style the components. Since we installed Bootstrap as a dependency in the previous step, we can import the Bootstrap CSS file into our React application. Open the `src/index.js` file in your project and add the following line at the top:
+
+   ```javascript
+   import 'bootstrap/dist/css/bootstrap.min.css';
+   ```
+
+   This line imports the Bootstrap CSS file from the installed package.
+
+With these dependencies installed, you can now use Bootstrap components in your React application. You can import and use React Bootstrap components in your React components like this:
+
+```javascript
+import React from 'react';
+import { Button } from 'react-bootstrap';
+
+const MyComponent = () => {
+  return (
+    <Button variant="primary">Click me</Button>
+  );
+};
+
+export default MyComponent;
+```
+
+In this example, we import the `Button` component from React Bootstrap and use it in our `MyComponent` component.
+
+Remember to import the specific React Bootstrap components you need in each of your React components.
+
+That's it! Now you have React Bootstrap installed and can start using Bootstrap components in your React application.
