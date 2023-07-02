@@ -1,0 +1,26 @@
+JavaScript Data types
+JavaScript is a dynamically typed language, which means that variables can hold values of different types throughout their lifetime. Here are the main data types in JavaScript:
+
+1. **Primitive Types**:
+   - **Number**: Represents numeric values, both integers and floating-point numbers. For example: `42`, `3.14`.
+   - **String**: Represents textual data enclosed in single quotes ('') or double quotes (""). For example: `'Hello, world!'`, `"JavaScript"`.
+   - **Boolean**: Represents a logical value, either `true` or `false`.
+   - **Null**: Represents the intentional absence of any object value. It is a primitive value, typically used to indicate that a variable has no value assigned to it.
+   - **Undefined**: Represents a variable that has been declared but not assigned any value.
+   - **Symbol**: Introduced in ECMAScript 6, symbols are unique and immutable values that can be used as property keys in objects. They are often used to define unique identifiers.
+   
+2. **Object Types**:
+   - **Object**: Represents a collection of key-value pairs. Objects are one of the fundamental data structures in JavaScript and can hold properties and methods. They are created using the object literal notation `{}` or the `new Object()` constructor.
+   - **Array**: Represents an ordered collection of values. Arrays can store multiple values of any type and are created using square brackets `[]` or the `new Array()` constructor.
+   - **Function**: Represents a reusable block of code that can be invoked by its name. Functions are objects in JavaScript and can be assigned to variables, passed as arguments, and returned from other functions.
+
+3. **Special Types**:
+   - **BigInt**: Introduced in ECMAScript 2020, BigInt is a numeric type that can represent integers with arbitrary precision. It is created by appending `n` to the end of an integer literal or by calling the `BigInt()` constructor.
+   - **Date**: Represents a specific moment in time, including date and time values. It provides methods for working with dates and times.
+   - **RegExp**: Represents a regular expression, which is used for pattern matching and manipulation of strings.
+
+JavaScript also provides various methods and operators to work with these data types, perform type conversions, and manipulate their values.
+
+It's worth noting that JavaScript is a loosely typed language, which means that variables can change their data type during runtime. For example, a variable that initially holds a number can later be assigned a string value.
+
+Understanding these data types and their characteristics is essential for writing effective JavaScript code and performing operations on different types of values.
