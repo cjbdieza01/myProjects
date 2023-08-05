@@ -1,0 +1,8 @@
+Introduction to HTML
+
+-To share information world wide, we need the help of the internet
+-Toshare information over the internet, We need need to create of design a website.
+-Webpage is a well formated document used to share information over the internet.
+-To create a well formated documents, We use HTML to create a well formated documents (AKA Webpages). 
+-In late 1990's, Tim Barners-Lee has developed HTML.
+-HTML is a language to format web pages.

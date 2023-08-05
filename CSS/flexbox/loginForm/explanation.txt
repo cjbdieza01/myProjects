@@ -1,0 +1,19 @@
+To make the footer stick to the very bottom of the page, you need to understand a concept called "CSS Flexbox" and utilize the `flex` property and `min-height` property.
+
+Here's the explanation step by step:
+
+1. HTML Structure: 
+   Your HTML structure consists of three main parts - the header, the main container, and the footer. The header and main container are placed inside the `body` element, and the footer is also a direct child of the `body` element.
+
+2. Flexbox and `min-height: 100vh`:
+   The key to making the footer stick to the bottom of the page is by using CSS Flexbox. Flexbox is a layout model that allows elements inside a container to be dynamically arranged based on their properties. In this case, you apply Flexbox to the `body` element.
+
+   By setting `display: flex` and `flex-direction: column` to the `body`, you make it a flex container that stacks its children vertically. Additionally, setting `min-height: 100vh` to the `body` ensures that it takes at least the full viewport height, regardless of the content height.
+
+3. Main Container's Flex Growth:
+   To control the positioning of the footer, you need to ensure that the main container, which includes the login content, takes up the remaining available space in the viewport. This is done using the `flex: 1` property on the `.mainContainer` class. The `flex: 1` property tells the flex container to distribute any extra available space among its flex items. In this case, it allows the `.mainContainer` to expand and take up the remaining space below the header.
+
+4. Footer's Placement:
+   Finally, you position the footer at the very bottom of the flex container by setting `margin-top: auto;` on the `.footer` class. When you use `margin-top: auto`, it pushes the footer downwards as far as possible, effectively making it stick to the bottom.
+
+In summary, the combination of CSS Flexbox applied to the `body` with `min-height: 100vh` ensures the main container takes up the available space, and the `margin-top: auto;` on the footer pushes it to the bottom, creating the effect of a sticky footer that stays at the bottom of the page, even when the content is not enough to fill the entire viewport.

@@ -1,0 +1,81 @@
+CSS Specificity is a crucial concept in Cascading Style Sheets (CSS) that determines which CSS rules will be applied to an element when multiple rules target the same element. When there's a conflict between CSS rules, specificity determines which rule takes precedence.
+
+CSS rules are applied based on specificity values, which are calculated using four components:
+
+1. **Inline Styles**: Inline styles are applied directly to the HTML element using the `style` attribute. They have the highest specificity value.
+
+2. **IDs**: ID selectors target elements with a specific `id` attribute. They have a higher specificity value than class selectors and element selectors.
+
+3. **Classes, Attributes, and Pseudo-Classes**: Class selectors (e.g., `.my-class`), attribute selectors (e.g., `[type="text"]`), and pseudo-classes (e.g., `:hover`, `:focus`) have a medium specificity value.
+
+4. **Elements and Pseudo-Elements**: Element selectors (e.g., `p`, `div`) and pseudo-elements (e.g., `::before`, `::after`) have the lowest specificity value.
+
+Specificity values are represented as a four-component tuple: `(a, b, c, d)`, where:
+
+- `a` is the number of inline styles.
+- `b` is the number of ID selectors.
+- `c` is the number of class, attribute, and pseudo-class selectors.
+- `d` is the number of element and pseudo-element selectors.
+
+Now, let's see some examples to understand how specificity works:
+
+**Example 1**:
+```html
+<p id="my-paragraph" class="highlight">Hello, CSS Specificity!</p>
+```
+
+```css
+p {
+  color: blue;
+}
+
+#my-paragraph {
+  color: red;
+}
+
+.highlight {
+  color: green;
+}
+```
+
+In this example, the color of the `p` element will be red because the `#my-paragraph` selector has a higher specificity (1 ID selector) than the `.highlight` selector (1 class selector).
+
+**Example 2**:
+```html
+<p style="color: orange;">Hello, CSS Specificity!</p>
+```
+
+```css
+p {
+  color: blue;
+}
+
+.highlight {
+  color: green;
+}
+```
+
+In this example, the color of the `p` element will be orange because inline styles have the highest specificity.
+
+**Example 3**:
+```html
+<button class="btn btn-primary">Click Me</button>
+```
+
+```css
+button.btn {
+  background-color: blue;
+}
+
+.btn-primary {
+  background-color: green;
+}
+```
+
+In this example, the background color of the button will be blue because the selector `button.btn` has a higher specificity (1 element selector + 1 class selector) than `.btn-primary` (1 class selector).
+
+Keep in mind that the order of the rules in the CSS file doesn't affect specificity. Specificity is solely based on the selectors' components.
+
+If two rules have the same specificity, the last rule declared in the CSS will take precedence due to the cascading nature of CSS.
+
+Understanding specificity is essential for writing maintainable and predictable CSS code, especially when dealing with large projects with many developers. It helps prevent unexpected styling issues and makes it easier to troubleshoot conflicts in your stylesheets.
