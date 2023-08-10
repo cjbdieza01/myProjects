@@ -1,0 +1,26 @@
+In CSS, both `align-items` and `justify-content` are properties used to align and position flexbox items within a flex container. However, they apply to different dimensions and have distinct purposes:
+
+1. `align-items`:
+   - This property is used to align flex items along the cross-axis of the flex container.
+   - The cross-axis is the perpendicular axis to the main axis (the direction in which the flex items are laid out).
+   - It controls the alignment of items vertically when the flex container's `flex-direction` is set to either `row` or `row-reverse`, and horizontally when the `flex-direction` is set to either `column` or `column-reverse`.
+   - Possible values for `align-items` include:
+     - `flex-start`: Items are aligned to the start of the cross-axis (top for `row` and `row-reverse`, left for `column` and `column-reverse`).
+     - `flex-end`: Items are aligned to the end of the cross-axis (bottom for `row` and `row-reverse`, right for `column` and `column-reverse`).
+     - `center`: Items are centered along the cross-axis.
+     - `baseline`: Items are aligned such that their baselines are aligned.
+     - `stretch`: Items are stretched to fill the cross-axis (the default behavior).
+
+2. `justify-content`:
+   - This property is used to align flex items along the main axis of the flex container.
+   - The main axis is the direction in which the flex items are laid out (either horizontally from left to right or vertically from top to bottom).
+   - It controls the alignment of items horizontally when the `flex-direction` is set to `row` or `row-reverse`, and vertically when the `flex-direction` is set to `column` or `column-reverse`.
+   - Possible values for `justify-content` include:
+     - `flex-start`: Items are aligned to the start of the main axis.
+     - `flex-end`: Items are aligned to the end of the main axis.
+     - `center`: Items are centered along the main axis.
+     - `space-between`: Items are evenly distributed along the main axis with equal space between them.
+     - `space-around`: Items are evenly distributed along the main axis with equal space around them.
+     - `space-evenly`: Items are evenly distributed along the main axis with equal space around them and at the edges.
+
+In summary, `align-items` controls the alignment of flex items along the cross-axis, while `justify-content` controls their alignment along the main axis. Both properties are essential for achieving flexible and responsive layouts using flexbox.
