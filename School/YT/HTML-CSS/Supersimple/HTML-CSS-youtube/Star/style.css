@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .star {
+    width: 100px;
+    height: 100px;
+    background-color: #f39c12;
+    clip-path: polygon(50% 0%, 61% 38%, 100% 38%, 68% 61%, 79% 100%, 50% 76%, 21% 100%, 32% 61%, 0% 38%, 39% 38%);
+  }
+  
