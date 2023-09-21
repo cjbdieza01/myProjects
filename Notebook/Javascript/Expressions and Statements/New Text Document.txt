@@ -1,0 +1,42 @@
+JavaScript code consists of both expressions and statements, and understanding the difference between them is fundamental to programming in JavaScript. Here are the key distinctions between expressions and statements:
+
+**1. Definitions:**
+
+- **Expression:** An expression is a piece of code that produces a value. It can be as simple as a single constant or variable, or it can be a combination of constants, variables, operators, and function calls that produce a value. For example, `3 + 4` is an expression that evaluates to `7`, and `myVariable` is an expression that evaluates to the value stored in `myVariable`.
+
+- **Statement:** A statement is a piece of code that performs an action. Statements don't necessarily produce a value. They are typically used to control the flow of a program or perform some operation. For example, `if` statements, `for` loops, and variable assignments are all examples of statements.
+
+**2. Usage:**
+
+- **Expressions** are often used where a value is expected. For instance, you can use expressions in assignments, function parameters, or as parts of larger expressions.
+
+- **Statements** are used to perform actions or control the flow of your program. They are used to create the structure of your code, such as loops, conditionals, function declarations, and variable assignments.
+
+**3. Return Value:**
+
+- **Expressions** always return a value. When you evaluate an expression, it produces a result that can be used in further expressions or assigned to a variable.
+
+- **Statements** do not necessarily return a value. Some statements, like assignments, may have a value that they produce, but many statements do not return a value.
+
+Examples to illustrate the difference:
+
+```javascript
+// Expressions
+const sum = 3 + 4; // An expression that evaluates to 7
+const isTrue = true; // An expression that evaluates to true
+
+// Statements
+if (isTrue) { // An if statement, not an expression
+    console.log("It's true");
+}
+
+function myFunction() { // A function declaration, a statement
+    // ...
+}
+
+for (let i = 0; i < 5; i++) { // A for loop, a statement
+    // ...
+}
+```
+
+In summary, expressions produce values, while statements perform actions or control the flow of your program. Understanding when to use each is crucial for writing effective and readable JavaScript code.
