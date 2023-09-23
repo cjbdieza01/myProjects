@@ -1,0 +1,49 @@
+Notes for You:: JavaScript Assignment Operators
+
+Assignment Operator (=): 
+- is used to assign a value to variable or a constant.
+
+Short Hand Assignment Operators (SHAO): 
+- AAO (Arithmetic Assignment Operators)
++=
+-=
+*=
+/=
+%=
+
+Example code:
+const PI = 3.142;
+document.write("PI=",PI); // PI=3.142
+
+var a = 10;
+document.write("a=",a); // a=10
+a = 20;
+document.write("a=",a); // a=20
+a += 10;          //  a = a + 10;
+document.write("a=",a); // a=30
+a-=10;           // a = a - 10;
+document.write("a=",a); // a=20
+a*=2;            // a = a * 2;
+document.write("a=",a); // a=40
+a/=2;           // a = a / 2;
+document.write("a=",a); // a=20
+a%=2;           // a = a % 2;
+document.write("a=",a); // a=0
+a += 10;
+document.write("a=",a); // a=10
+
+=========================================
+
+Follow the link for next video: 
+JavaScript Tutorial 26 - Increment & Decrement Operators in JavaScript - Part 1
+  
+
+ • Increment & Decre...  
+
+Follow the link for previous video: 
+JavaScript Tutorial 24 - Conditional Operator in JavaScript | JavaScript Ternary Operator
+  
+
+ • JavaScript Ternar...  
+
+=========================================
