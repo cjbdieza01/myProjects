@@ -1,4 +1,4 @@
-Certainly! In the context of the Document Object Model (DOM), a "node" represents an element or object in the structure of an HTML or XML document. The DOM is a hierarchical representation of a web page's structure, and nodes are the building blocks of this structure. Here's a precise step-by-step explanation of nodes in the DOM:
+In the context of the Document Object Model (DOM), a "node" represents an element or object in the structure of an HTML or XML document. The DOM is a hierarchical representation of a web page's structure, and nodes are the building blocks of this structure. Here's a precise step-by-step explanation of nodes in the DOM:
 
 **1. HTML or XML Document:**
    - Step 1: Start with an HTML or XML document, which consists of elements, attributes, text, and other content.

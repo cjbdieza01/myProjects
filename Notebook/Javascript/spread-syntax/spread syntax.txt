@@ -1,7 +1,7 @@
 argument
 const queryObj = {...req.query};
 
-The line of code you provided is using the spread syntax in JavaScript to create a new object called queryObj. Let's break it down step by step:
+The line of code provided is using the spread syntax in JavaScript to create a new object called queryObj. Let's break it down step by step:
 
 const: This keyword is used to declare a constant variable. A constant is a value that cannot be reassigned once it is defined. In this case, queryObj will be a constant variable.
 

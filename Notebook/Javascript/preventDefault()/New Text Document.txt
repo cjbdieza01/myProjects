@@ -1,0 +1,22 @@
+`preventDefault()` is a method in JavaScript that is commonly used with event objects, typically in the context of handling events in web development. This method is used to prevent the default behavior of an event from occurring.
+
+Here's how it works:
+
+1. **Event Handling**: When you interact with a web page, various events are generated. For example, clicking a link generates a click event, submitting a form generates a submit event, and pressing a key generates a keydown event.
+
+2. **Default Behavior**: Most of these events have default behaviors associated with them. For example, clicking a link typically navigates to the URL specified in the link's `href` attribute, and submitting a form usually sends the form data to the server and reloads the page.
+
+3. **Prevent Default**: If you want to override or prevent this default behavior, you can use the `preventDefault()` method. When you call `event.preventDefault()`, it tells the browser not to perform the default action associated with the event.
+
+Here's an example of how you might use `preventDefault()`:
+
+```javascript
+document.querySelector('a').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents the default behavior of the link click
+  // Your custom code here
+});
+```
+
+In this example, when you click on an anchor (`<a>`) element, the click event handler is called. Inside the handler, `event.preventDefault()` is used to prevent the default behavior of navigating to the link's URL. You can then add your custom JavaScript code to handle the click event in any way you want.
+
+So, `preventDefault()` is a useful method for controlling and customizing the behavior of events in web applications.
