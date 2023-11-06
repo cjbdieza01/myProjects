@@ -1,0 +1,84 @@
+{
+  "newClients": [
+    {
+      "date": "2023-11-04T16:29:38.205Z",
+      "firstName": "Choco",
+      "middleName": "Summer",
+      "lastName": "Clothie",
+      "municipality": "Metro Manila",
+      "picture": "images/johndoe.jpg"
+    },
+    {
+      "date": "2023-11-05T18:00:35.686Z",
+      "firstName": "Ludelyn",
+      "middleName": "Monderin",
+      "lastName": "Cruz",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/e1e1bbff-98df-4411-8572-f8d86c1d35b2"
+    },
+    {
+      "date": "2023-11-05T18:00:46.935Z",
+      "firstName": "CJ",
+      "middleName": "Pogi",
+      "lastName": "Sudaria",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/41052e78-1fd7-4ea7-a98c-f6fb872f9597"
+    },
+    {
+      "date": "2023-11-05T18:24:09.703Z",
+      "firstName": "Ludelyn",
+      "middleName": "Monderin",
+      "lastName": "Cruz",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/e1e1bbff-98df-4411-8572-f8d86c1d35b2"
+    },
+    {
+      "date": "2023-11-05T19:06:30.689Z",
+      "firstName": "Choco",
+      "middleName": "Summer",
+      "lastName": "Clothie",
+      "municipality": "Metro Manila",
+      "picture": "images/johndoe.jpg"
+    },
+    {
+      "date": "2023-11-05T19:49:39.876Z",
+      "firstName": "Josephine",
+      "middleName": "Morada",
+      "lastName": "Persian",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/5d3dbb40-0abb-4c83-8dda-6b14fb540760"
+    },
+    {
+      "date": "2023-11-05T20:03:54.692Z",
+      "firstName": "Ludelyn",
+      "middleName": "Monderin",
+      "lastName": "Cruz",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/e1e1bbff-98df-4411-8572-f8d86c1d35b2"
+    },
+    {
+      "date": "2023-11-05T20:24:05.779Z",
+      "firstName": "Ludelyn",
+      "middleName": "Monderin",
+      "lastName": "Cruz",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/e1e1bbff-98df-4411-8572-f8d86c1d35b2"
+    },
+    {
+      "date": "2023-11-05T20:29:56.446Z",
+      "firstName": "Josephine",
+      "middleName": "Morada",
+      "lastName": "Persian",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/5d3dbb40-0abb-4c83-8dda-6b14fb540760"
+    },
+    {
+      "date": "2023-11-05T20:37:47.547Z",
+      "firstName": "Josephine",
+      "middleName": "Morada",
+      "lastName": "Persian",
+      "municipality": "2",
+      "picture": "blob:http://127.0.0.1:5500/5d3dbb40-0abb-4c83-8dda-6b14fb540760"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "clients": [
+    {
+      "id": 693965485,
+      "loanType": "Emergency Loan",
+      "loans": [
+        {
+          "loanBrand": "Emergency",
+          "loanId": 1699206275192974,
+          "date": "2021-03-20",
+          "dueDate": "2021-04-20",
+          "amount": 50000,
+          "payable": 55000,
+          "totalPayments": 55000,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid",
+          "reason": "Medical"
+        }
+      ],
+      "firstName": "Choco",
+      "middleName": "Summer",
+      "lastName": "Clothie",
+      "spouseName": "Jane Doe",
+      "birthDate": "1990-05-15",
+      "cusEmail": "johndoe@example.com",
+      "contact": "09998765432",
+      "address": "address 1",
+      "brgy": "San Juan",
+      "municipality": "Metro Manila",
+      "cusArea": "Area 2",
+      "userPicture": "images/johndoe.jpg",
+      "userDocs": "images/johndoe.jpg",
+      "assignedCollector": "Alice Johnson",
+      "paymentHistory": [
+        {
+          "date": "2023-11-6 3:12:59",
+          "paymentAmount": 100
+        },
+        {
+          "date": "2023-11-6 3:13:31",
+          "paymentAmount": 200
+        },
+        {
+          "date": "2023-11-6 3:23:14",
+          "paymentAmount": 50
+        },
+        {
+          "date": "2023-11-6 3:25:30",
+          "paymentAmount": 30
+        },
+        {
+          "date": "11-6-2023 3:59:38",
+          "paymentAmount": 5000
+        },
+        {
+          "date": "11-6-2023 4:0:14",
+          "paymentAmount": 49000
+        },
+        {
+          "date": "11-6-2023 4:16:18",
+          "paymentAmount": 620
+        }
+      ],
+      "loanHistory": [
+        {
+          "loanBrand": "New",
+          "loanId": 1699111436720474,
+          "date": "2021-03-20",
+          "dueDate": "2021-04-20",
+          "amount": 50000,
+          "payable": 55000,
+          "totalPayments": 0,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        },
+        {
+          "loanBrand": "Renew",
+          "loanId": 1699190431567723,
+          "date": "2021-03-20",
+          "dueDate": "2021-04-20",
+          "amount": 50000,
+          "payable": 55000,
+          "totalPayments": 20,
+          "runningBalance": 54980,
+          "term": 30,
+          "status": "paid"
+        },
+        {
+          "loanBrand": "Renew",
+          "loanId": 1699194148243785,
+          "date": "2023-11-05",
+          "dueDate": "2023-11-05",
+          "amount": 500,
+          "payable": 600,
+          "totalPayments": 600,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        }
+      ]
+    },
+    {
+      "id": 236730146,
+      "loanType": "Regular Loan",
+      "loans": [
+        {
+          "loanBrand": "Renew",
+          "loanId": 1699214677093289,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-07",
+          "amount": 5000,
+          "payable": 5600,
+          "totalPayments": 5600,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        }
+      ],
+      "firstName": "Ludelyn",
+      "middleName": "Monderin",
+      "lastName": "Cruz",
+      "spouseName": "John Sudaria",
+      "birthDate": "2023-11-06",
+      "cusEmail": "lyn@gmail.com",
+      "contact": "+639455704319",
+      "address": "sdfsdf",
+      "brgy": "3",
+      "municipality": "2",
+      "cusArea": "Area 54",
+      "userPicture": "blob:http://127.0.0.1:5500/e1e1bbff-98df-4411-8572-f8d86c1d35b2",
+      "userDocs": "blob:http://127.0.0.1:5500/118fcfa2-0411-4cd8-af77-fb74b3199408",
+      "assignedCollector": "none",
+      "paymentHistory": [
+        {
+          "date": "11-6-2023 4:4:15",
+          "paymentAmount": 12000
+        },
+        {
+          "date": "11-6-2023 4:26:14",
+          "paymentAmount": 10
+        },
+        {
+          "date": "11-6-2023 4:37:6",
+          "paymentAmount": 5590
+        }
+      ],
+      "loanHistory": [
+        {
+          "loanBrand": "New",
+          "loanId": 169919712378138,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-06",
+          "amount": 10000,
+          "payable": 12000,
+          "totalPayments": 12000,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        }
+      ]
+    },
+    {
+      "id": 454764617,
+      "loanType": "Regular Loan",
+      "loans": [
+        {
+          "loanBrand": "Renew",
+          "loanId": 1699216190856694,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-07",
+          "amount": 3000,
+          "payable": 3600,
+          "totalPayments": 0,
+          "runningBalance": 3600,
+          "term": 30,
+          "status": "active"
+        }
+      ],
+      "firstName": "Josephine",
+      "middleName": "Morada",
+      "lastName": "Persian",
+      "spouseName": "Di Natin Alam",
+      "birthDate": "2023-11-07",
+      "cusEmail": "cj@gmail.com",
+      "contact": "+639455704319",
+      "address": "sdfsdf",
+      "brgy": "1",
+      "municipality": "2",
+      "cusArea": "Area 54",
+      "userPicture": "blob:http://127.0.0.1:5500/5d3dbb40-0abb-4c83-8dda-6b14fb540760",
+      "userDocs": "blob:http://127.0.0.1:5500/d7577396-6e0e-42ee-9ee2-2178af0c8be6",
+      "assignedCollector": "none",
+      "paymentHistory": [
+        {
+          "date": "11-6-2023 4:18:47",
+          "paymentAmount": 1100
+        }
+      ],
+      "loanHistory": [
+        {
+          "loanBrand": "New",
+          "loanId": 1699213004536309,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-13",
+          "amount": 1000,
+          "payable": 1100,
+          "totalPayments": 1100,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        }
+      ]
+    },
+    {
+      "id": 877242301,
+      "loanType": "Emergency Loan",
+      "loans": [
+        {
+          "loanBrand": "Emergency",
+          "loanId": 1699216657817463,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-07",
+          "amount": 1000,
+          "payable": 1100,
+          "totalPayments": 0,
+          "runningBalance": 1100,
+          "term": 60,
+          "status": "active",
+          "reason": "medical"
+        }
+      ],
+      "firstName": "Josephine",
+      "middleName": "Morada",
+      "lastName": "Persian",
+      "spouseName": "Di Natin Alam",
+      "birthDate": "2023-11-07",
+      "cusEmail": "cj@gmail.com",
+      "contact": "+639455704319",
+      "address": "sdfsdf",
+      "brgy": "1",
+      "municipality": "2",
+      "cusArea": "Area 54",
+      "userPicture": "blob:http://127.0.0.1:5500/5d3dbb40-0abb-4c83-8dda-6b14fb540760",
+      "userDocs": "blob:http://127.0.0.1:5500/d7577396-6e0e-42ee-9ee2-2178af0c8be6",
+      "assignedCollector": "none",
+      "paymentHistory": [],
+      "loanHistory": [
+        {
+          "loanBrand": "New",
+          "loanId": 1699213004536309,
+          "date": "2023-11-06",
+          "dueDate": "2023-11-13",
+          "amount": 1000,
+          "payable": 1100,
+          "totalPayments": 1100,
+          "runningBalance": 0,
+          "term": 30,
+          "status": "paid"
+        }
+      ]
+    }
+  ]
+}

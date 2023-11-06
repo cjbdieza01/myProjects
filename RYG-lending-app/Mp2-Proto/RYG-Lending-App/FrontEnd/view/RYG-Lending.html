@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="RYGDash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <title>RYG Finance</title>
+    <link rel="icon" href="images/rygicon-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-lg-2 min-vh-100 d-flex flex-column justify-content-between" style="background-color: #00307d;">
+                <div class="mt-4" id="sideNavbar">
+                    <a class="d-flex text-decoration-none mt-1 align-items-center text-white">
+                        <img src="images/rygv3-removebg-preview.png" style="width: 250px; height: 60px;">
+                    </a>
+                    <hr class="text-white"/>
+                    <ul class="nav nav-pills flex-column mt-4">
+                        <li class="nav-item py-2 py-sm-0">
+                            <a class="nav-link text-white show active" data-bs-toggle="pill" href="#tab1">
+                                <i class="fa-solid fa-gauge fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0">
+                            <a class="nav-link text-white" data-bs-toggle="pill" href="#tab2">
+                                <i class="fa-solid fa-users fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Collectors</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0">
+                            <a class="nav-link text-white" data-bs-toggle="pill" href="#tab3">
+                                <i class="fa-regular fa-file fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Client Portal</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0">
+                            <a class="nav-link text-white" data-bs-toggle="pill" href="#tab4">
+                                <i class="fa-regular fa-folder-open fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">For Approval</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0">
+                            <a class="nav-link text-white" data-bs-toggle="pill" href="#tab5">
+                                <i class="fa fa-folder-open"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Reports</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0">
+                            <a id="logoutTab" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#confirmLogoutModal">
+                                <i class="fa-solid fa-right-from-bracket fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="left-content col-lg-10">
+                <div class="tab-content col-12">
+                    <div class="tab-pane fade active show" id="tab1">
+                        <div class="row">
+                            <div class="d-flex justify-content-left flex-column col-lg-9">
+                                <h1 style="color: #00307d;">Monthly Financial Summary </h1>
+                                <h5 id="dash-dateTime"></h5>
+                            </div>
+                            <div class="col-lg-3 d-flex justify-content-center align-items-center" id="user-display" style="padding-top: 25px;"></div>
+                        </div> 
+                        <hr/>
+                        <div class="row">
+                            <div class="cardBox">
+                                <div class="card">
+                                    <div>
+                                        <div class="numbers" id="totalCollections"></div>
+                                        <div class="cardName">Current Total Collection</div>
+                                    </div>
+                                    <div class="iconBx">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div>
+                                        <div class="numbers" id="totalRelease"></div>
+                                        <div class="cardName">Current Total Release</div>
+                                    </div>
+                                    <div class="iconBx">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div>
+                                        <div class="numbers" id="total-difference"></div>
+                                        <div class="cardName">Difference</div>
+                                    </div>
+                                    <div class="iconBx">
+                                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div>
+                                        <div class="numbers" id="total-clients"></div>
+                                        <div class="cardName">Total Clients</div>
+                                    </div>
+                                    <div class="iconBx">
+                                        <ion-icon name="cash-outline"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bottom-content">
+                                <div class="col-sm-8 card" style="margin-left: 20px;">
+                                    <div class="p-3 row">
+                                        <div class="col-sm-7">
+                                            <h4 style="color: #00307d;">Recent transactions:</h4>
+                                        </div>
+                                        <div class="col-sm-5 row" id="transaction-search">
+                                            <div class="col-sm-2 d-flex align-items-center justify-content-center" style="padding-left: 40px;">
+                                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                            </div>
+                                            <div class="col-sm-10 d-flex justify-content-center align-items-center">
+                                                <input type="text" class="form-control" placeholder="Search.." aria-label="Search transactions" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="table-container">
+                                        <table class="table" id="transactionsTable">
+                                            <thead id="table-header">
+                                                <tr>
+                                                    <th scope="col">Date/Time</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Transaction Log</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="transactions-list">
+                                                <tr>
+                                                    <td>asfafaf</td>
+                                                    <td>Payment</td>
+                                                    <td colspan="4">Nagbayad si CJ ng 1000 sa cashier</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <div class="col-sm-3 card" style="margin-left: 50px;">
+                                <div class="p-3">
+                                    <h4 style="color: #00307d;">New clients:</h4>
+                                </div>
+                                <div id="table-container">
+                                    <table class="table" id="new-clients">
+                                        <thead id="table-header">
+                                            <tr>
+                                                <th scope="col" colspan="3">Name/Location</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="newClient-list"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                        <div class="content-section container-fluid">
+                            <div class="table-header-2">
+
+                            </div>
+                            <div class="collectors-container col d-flex">
+                                <div class="container-fluid row">
+                                    <div class="col-lg-10">
+
+                                    </div>
+                                    <div class="col-lg-2 py-3 d-flex justify-content-end">
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#addCollectorModal"
+                                            style="background-color: #00307d; color: whitesmoke;">Update Collector
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="addCollectorModal" tabindex="-1"
+                                            aria-labelledby="addCollectorModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header"
+                                                        style="background: #00307d; color: white;">
+                                                        <h1 class="modal-title fs-5" id="addCollectorModalLabel">Update
+                                                            Collector</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="number" class="form-control" id="addCollectorInput"
+                                                            placeholder="Collectors ID">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn"
+                                                            style="background-color: #00307d; color: white;">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- <div class="collectors-card container-fluid border">
+                                    <div class="header-1">
+                                        <h4>Collector 1</h4>
+
+                                        <a data-bs-toggle="modal" data-bs-target="#updateListModal">Update List</a>
+
+
+                                    </div>
+                                    <table class="table mb-3 table-striped table-hover">
+                                        <thead class="tableHeader">
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Running Balance</th>
+                                                <th scope="col" colspan="2">Location</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="collectors-card container-fluid border mt-3 table-striped table-hover">
+                                    <div class="header-1">
+                                        <h4>Collector 2</h4>
+                                        <a data-bs-toggle="modal" data-bs-target="#updateListModal">Update List</a>
+
+                                    </div>
+                                    <table class="table mb-3 table-striped table-hover">
+                                        <thead class="tableHeader">
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Running Balance</th>
+                                                <th scope="col" colspan="2">Location</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="collectors-card container-fluid border mt-3 table-striped table-hover">
+                                    <div class="header-1">
+                                        <h4>Collector 3</h4>
+                                        <a  data-bs-toggle="modal" data-bs-target="#updateListModal">Update List</a>
+
+                                    </div>
+                                    <table class="table mb-3 table-striped table-hover">
+                                        <thead class="tableHeader">
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Running Balance</th>
+                                                <th scope="col" colspan="2">Location</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td><i class="fa-solid fa-trash fa-sm" style="color: rgb(241, 49, 49);"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> -->
+                                <div class="modal fade" id="updateListModal" tabindex="-1" aria-labelledby="updateListLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color: #00307d; color: white;">
+                                                <h1 class="modal-title fs-5" id="updateListLabel">Update</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input type="number" class="form-control" id="customerListsInput"
+                                                    placeholder="Customer ID">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn text-white"
+                                                    style="background-color: #00307d;">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3">        
+                        <div class="tab-content">
+                            <div id="emp1" class="tab-pane mt-3 fade show active">
+                                <div class="row d-flex justify-content-center align-items-center">
+                                  <div class="col-7">
+                                    <h1 style="color: #00307d">Clients Registry <i class="fa-solid fa-users-line fa-sm"></i></h1>
+                                  </div>
+                                  <div class="col-3">
+                                    <div class="form-group justify-content-center align-items-center d-flex mt-3">
+                                      <i class="bx bx-search-alt" style="font-size: 30px;"></i><input id="client-search" type="text" class="search form-control" placeholder="Search..">
+                                    </div>
+                                  </div>
+                                  <div class="col-2">
+                                    <div class="d-flex justify-content-center align-items-center mt-3" style="margin-right: 70px;">
+                                        <button id="new-client-btn" class="btn" data-bs-toggle="modal" data-bs-target="#newClientModal">New Client</button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="newClientModal" tabindex="-1" aria-labelledby="newClientModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" id="newClientModalDialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="background-color: #00307d; color: white;">
+                                                    <h5 class="modal-title">New Client Form</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="newClientRegisterForm">
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">First Name:</label>
+                                                                <input type="name" class="form-control" id="borrowerFirstName">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Middle Name:</label>
+                                                                <input type="name" class="form-control" id="borrowerMiddleName">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Last Name:</label>
+                                                                <input type="name" class="form-control" id="borrowerLastName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-12">
+                                                                <label class="form-label">Spouse Name:</label>
+                                                                <input type="name" class="form-control" id="spouseName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Birth Date:</label>
+                                                                <input type="date" class="form-control" id="borrowerBirthDate">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Email:</label>
+                                                                <input type="email" class="form-control" id="borrowerEmail">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Mobile:</label>
+                                                                <input type="text" class="form-control" id="borrowerMobileNumber" placeholder="+639">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2 px-2">
+                                                            <label class="form-label">Street Address:</label>
+                                                            <input type="text" class="form-control" id="borrowerAddress">
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Barangay:</label>
+                                                                <select class="form-select" id="borrowerBarangay">
+                                                                    <option selected>Choose...</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Municipality:</label>
+                                                                <select class="form-select" id="borrowerMunicipality">
+                                                                    <option selected>Choose...</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Area:</label>
+                                                                <input type="text" class="form-control" id="borrowerArea">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Loan Type:</label>
+                                                                <select class="form-select" id="borrowerLoanType">
+                                                                    <option selected>Choose...</option>
+                                                                    <option value="1">Regular Loan</option>
+                                                                    <option value="2">Emergency Loan</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Loan Amount:</label>
+                                                                <input type="number" class="form-control" id="borrowerLoanAmount">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Total Payable:</label>
+                                                                <input type="number" class="form-control" id="borrowerTotalPayable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Loan Date:</label>
+                                                                <input type="date" class="form-control" id="borrowerLoanDate">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Loan Due Date:</label>
+                                                                <input type="date" class="form-control" id="borrowerLoanDueDate">
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label">Loan Term:</label>
+                                                                <input type="text" class="form-control" id="borrowerLoanTerm" placeholder="Days">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2 px-2">
+                                                            <div class="col-sm-6">
+                                                                <label for="newClientPicture" class="form-label">Client Picture:</label>
+                                                                <input class="form-control" type="file" id="newClientPicture">
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label for="newClientDocs" class="form-label">Client ID's:</label>
+                                                                <input class="form-control" type="file" id="newClientDocs">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn modalBtn" id="newCLientConfirmBtn" onclick="addForApprovalClient()">Apply for Loan</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <hr/>
+                                <div class="row d-flex justify-content-center align-items-center" id="client-content">
+                                    <div class="col-lg-10">
+                                        <table class="table mt-2 table-hover results" id="listClients">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Account Number</th>
+                                                <th scope="col">Full Name</th>
+                                                <th scope="col">Total Payable</th>
+                                                <th scope="col">Total Payment</th>
+                                                <th scope="col">Location</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="clientPortalTable" class="visible-results hidden"></tbody>
+                                        <span class="counter pull-right"></span>
+                                        </table>
+                                    </div>
+                                    <hr/>
+                                </div>
+                                <div class="row justify-content-center align-items-center">
+                                    <!-- Client Profile -->
+                                    <div class="col-lg-10 card p-2 d-flex flex-row justify-content-center" id="clientDisplayInfo">
+                                        <div class="col-md-9 d-flex flex-column" id="clientProfileContainer">
+                                            <div class="d-flex flex-row" id="clientUpper-Info" style="width: 100%; height: 40%;"></div>
+                                            <div id="clientMiddle-Info"></div>
+                                            <div class="lower-client d-flex align-items-center justify-content-between" id="clientLower-Info">
+                                                <button class="btn client-btn" data-bs-toggle="modal" data-bs-target="#paymentBtnModal">Make Payment</button>
+                                                <button class="btn client-btn" data-bs-toggle="modal" data-bs-target="#renewLoanBtnModal">Renew Loan</button>
+                                                <button class="btn client-btn" data-bs-toggle="modal" data-bs-target="#emergencyLoanModal">Emergency Loan</button>
+                                                <button class="btn client-btn" data-bs-toggle="modal" data-bs-target="#loanHistoryModal">Loan History</button>
+                                                <button class="btn client-btn" data-bs-toggle="modal" data-bs-target="#updateClientInfo">Update Personal Info</button>
+
+                                                <!-- payment modal -->
+                                                <div class="modal fade" id="paymentBtnModal" tabindex="-1" aria-hidden="true" aria-labelledby="paymentBtnModalLabel"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="p-2">
+                                                <h5 style="color: #00307d;">Payment History</h5>
+                                                </div>
+                                                <div id="table-container">
+                                                <table class="table" id="paymentHistory">   
+                                                    <thead id="table-header">
+                                                        <tr>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Amount</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="paymentHistoryTable">
+                                                    </tbody>
+                                                </table>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab4">
+                        <div class="accordion accordion-flush mt-5" id="forApprovalsAccordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" style="background-color: white; border: solid 1px;" data-bs-target="#for-approval-1" aria-expanded="true" aria-controls="for-approval-1">
+                                    <h6>Date/Time - New Regular Loan - John Rondina</h6<br>
+                                </button>
+                              </h2>
+                              <div id="for-approval-1" class="accordion-collapse collapse" data-bs-parent="#forApprovalsAccordion">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row">
+                                        <div class="d-flex flex-column" style="width: 50%;">
+                                            <span class="mt-2"><strong>Address: </strong></span><br>
+                                            <span><strong>Contact: </strong></span><br>
+                                            <span><strong>Email: </strong></span>
+
+                                        </div>
+                                        <div class="d-flex flex-column" style="width: 50%;">
+                                            <span class="mt-2"><strong>Loan Type: </strong></span><br>
+                                            <span><strong>Loan Amount: </strong></span><br>
+                                            <span><strong>Loan Payable: </strong></span><br>
+                                            <span><strong>Loan Term: </strong></span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary"style="background-color: #00307d;" aria-labelledby="center">Approved</button>
+                                    <button type="button" class="btn btn-secondary">Decline</button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- this where new approval accordian inserted into -->
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab5">
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th> <table class="table table-bordered">
+                                                <h3>Collection Report</h3>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Name</th>
+                                                        <th>Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>January-2023</td>
+                                                        <td>John Dave</td>
+                                                        <td>500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>February-2023</td>
+                                                        <td>Jane Doe</td>
+                                                        <td>500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>March-2023</td>
+                                                        <td>Johny Davis</td>
+                                                        <td>500</td>
+                                                    </tr>
+                                                    <!-- Add more table rows as needed -->
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                      <td>Total Payment</td>
+                                                      <td></td>
+                                                      <td>1500</td>
+                                                    </tr>
+                                            </table></th>
+                                            <th> <table class="table table-bordered">
+                                                <h3>Release Report</h3>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Name</th>
+                                                        <th>Area</th>
+                                                        <th>Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>January-2023</td>
+                                                        <td>Ben Stone</td>
+                                                        <td>A-1</td>
+                                                        <td>30000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>February-2023</td>
+                                                        <td>Mich Land</td>
+                                                        <td>A-2</td>
+                                                        <td>50000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>March-2023</td>
+                                                        <td>Olive Rock</td>
+                                                        <td>A-3</td>
+                                                        <td>60000</td>
+                                                    </tr>
+                                                    <!-- Add more table rows as needed -->
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                      <td>Total Release</td>
+                                                      <td></td>
+                                                      <td></td>
+                                                      <td>140000</td>
+                                                    </tr>
+                                            </table></th>
+                                            
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Confirm Logout modal -->
+    <div class="modal fade" id="confirmLogoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to logout?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmLogoutBtn" onclick="">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="../scriptsJS/dashboard.js"></script> -->
+    <script src="../scriptsJS/clientProfile.js"></script>
+    <script src="../scriptsJS/clientPortal.js"></script>
+    <!-- <script src="../scriptsJS/updatePayment.js"></script> -->
+</body>
+</html>

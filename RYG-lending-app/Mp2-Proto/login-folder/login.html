@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main">  	
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div style="display: flex; justify-content: center;">
+                <img src="images/rygv3-removebg-preview.png" alt="logo" style="width: 350px; height: 100px; padding-top: 8px;">
+            </div>
+            <div class="login" id="login-form">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Log in</label>
+                    <input id="loginUsername" class="input" type="username" name="username" placeholder="Username" required="">
+                    <input id="loginPassword" class="input" type="password" name="pswd" placeholder="Password" required="">
+                    <div class="alert alert-danger" role="alert">
+                        Login failed, please check your username or password.
+                    </div>
+                    <div class="alert" id="alert">
+                        <span class="closebtn" onclick="closeAlert()">&times;</span>  
+                        <strong>Error!</strong> Login failed, please check your email or password.
+                    </div>
+                    <button>Log in</button>
+                </form>
+            </div>
+
+            <div class="register" id="reg-form">
+                    <form class="form">
+                        <label for="chk" aria-hidden="true">Register</label>
+                        <input id="register-username" class="input" type="text" name="txt" placeholder="Username" required="">
+                        <input id="verification-code" class="input" type="password" name="code" placeholder="Verification Code" required="">
+                        <input id="register-password" class="input" type="password" name="pswd" placeholder="Password" required="">
+                        <div class="alert" id="reg-alert">
+                            <span class="closebtn" onclick="closeAlert()">&times;</span>  
+                            <strong>Error!</strong> Invalid owner verification code. Registration denied.
+                        </div>
+                        <button id="submit-button">Register</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>
+
+

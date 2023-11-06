@@ -1,0 +1,104 @@
+{
+  "transactions": [
+    {
+      "date": "2023-11-6 3:23:14",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱50."
+    },
+    {
+      "date": "2023-11-6 3:13:31",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱200."
+    },
+    {
+      "date": "2023-11-6 3:12:59",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱100."
+    },
+    {
+      "date": "2023-11-6 3:25:30",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱30."
+    },
+    {
+      "date": "2023-11-6 3:36:44",
+      "type": "New Loan Application",
+      "log": "Client Josephine Persian applied for Regular Loan subject for approval."
+    },
+    {
+      "date": "11-6-2023 3:49:39",
+      "type": "Loan Approval Status",
+      "log": "Client Josephine Persian Regular Loan has beed approved for the amount of 1000."
+    },
+    {
+      "date": "11-6-2023 3:59:38",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱5000."
+    },
+    {
+      "date": "11-6-2023 4:0:14",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱49000."
+    },
+    {
+      "date": "11-6-2023 4:3:54",
+      "type": "Loan Approval Status",
+      "log": "Client Ludelyn Cruz Regular Loan has beed approved for the amount of 10000."
+    },
+    {
+      "date": "11-6-2023 4:4:15",
+      "type": "Payment",
+      "log": "Client Ludelyn Cruz made a payment of ₱12000."
+    },
+    {
+      "date": "11-6-2023 4:4:37",
+      "type": "Renewundefined Application",
+      "log": "Client Ludelyn Cruz applied for Renewundefined subject for approval."
+    },
+    {
+      "date": "11-6-2023 4:16:18",
+      "type": "Payment",
+      "log": "Client Choco Clothie made a payment of ₱620."
+    },
+    {
+      "date": "11-6-2023 4:18:47",
+      "type": "Payment",
+      "log": "Client Josephine Persian made a payment of ₱1100."
+    },
+    {
+      "date": "11-6-2023 4:24:5",
+      "type": "Loan Approval Status",
+      "log": "Client Ludelyn Cruz Regular Loan has beed approved for the amount of 5000."
+    },
+    {
+      "date": "11-6-2023 4:26:14",
+      "type": "Payment",
+      "log": "Client Ludelyn Cruz made a payment of ₱10."
+    },
+    {
+      "date": "11-6-2023 4:29:50",
+      "type": "Renewundefined Application",
+      "log": "Client Josephine Persian applied for Renew Regular Loan subject for approval."
+    },
+    {
+      "date": "11-6-2023 4:29:56",
+      "type": "Loan Approval Status",
+      "log": "Client Josephine Persian Regular Loan has beed approved for the amount of 3000."
+    },
+    {
+      "date": "11-6-2023 4:37:6",
+      "type": "Payment",
+      "log": "Client Ludelyn Cruz made a payment of ₱5590."
+    },
+    {
+      "date": "11-6-2023 4:37:37",
+      "type": "undefined Application",
+      "log": "Client Josephine Persian applied for Emergency Loan subject for approval."
+    },
+    {
+      "date": "11-6-2023 4:37:47",
+      "type": "Loan Approval Status",
+      "log": "Client Josephine Persian Emergency Loan has beed approved for the amount of 1000."
+    }
+  ]
+}

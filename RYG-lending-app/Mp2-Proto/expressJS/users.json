@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "sharon",
+      "username": "sharon",
+      "password": "123456"
+    },
+    {
+      "id": 1697149999302,
+      "name": "Josephine",
+      "username": "ganda123",
+      "password": "qwerty"
+    },
+    {
+      "id": 1697150098234,
+      "name": "Jackie",
+      "username": "pogi123",
+      "password": "zxcvbn"
+    },
+    {
+      "id": 1697150473507,
+      "name": "lucky",
+      "username": "lucky123",
+      "password": "asdfg"
+    },
+    {
+      "id": 1697629408958,
+      "name": "ludelyn",
+      "username": "lyn123",
+      "password": "12345"
+    },
+    {
+        "id": 23100201,
+        "loanId": "123",
+        "name": "John Rondina",
+        "loanAmount": 30000,
+        "loanTerm": 60,
+        "loanType": "Regular Loan",
+        "totalPayments": 0,
+        "totalPayable": 30000,
+        "contact": "09915305011",
+        "brgy": "Malibay",
+        "municipality": "Zambales",
+        "userPicture": "images/lloydProfile.jpg"
+    },
+    {
+        "id": 23092510,
+        "loanId": "123",
+        "name": "Beth Eller",
+        "loanAmount": 30000,
+        "loanTerm": 60,
+        "loanType": "Regular Loan",
+        "contact": "09915305011",
+        "brgy": "Malibay",
+        "municipality": "Zambales",
+        "userPicture": "images/lloydProfile.jpg"
+    },
+    {
+        "id": 23061022,
+        "loanId": "123",
+        "name": "April Eller",
+        "loanAmount": 30000,
+        "loanTerm": 60,
+        "loanType": "Regular Loan",
+        "contact": "09915305011",
+        "brgy": "Malibay",
+        "municipality": "Zambales",
+        "userPicture": "images/lloydProfile.jpg"
+    }    
+  ]
+}

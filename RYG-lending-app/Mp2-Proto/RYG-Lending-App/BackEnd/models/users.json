@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 723490139,
+      "firstName": "Juan",
+      "lastName": "dela Cruz",
+      "email": "jd@gmail.com",
+      "mobile": "09215010001",
+      "address": "sa tabitabi po",
+      "password": "abcd123",
+      "isApproved":true
+    },
+    {
+      "id": 437439370,
+      "firstName": "CRIS JORDAN",
+      "lastName": "DIEZA",
+      "email": "crisjordandieza@gmail.com",
+      "mobile": "09203274191",
+      "password": "123",
+      "isApproved":true
+    },
+    {
+      "id": 522569449,
+      "firstName": "jane",
+      "lastName": "doe",
+      "email": "jane@gmail.com",
+      "mobile": "092150641494",
+      "password": "123",
+      "isApproved": false
+    },
+    {
+      "id": 734632070,
+      "firstName": "martin",
+      "lastName": "kalikak",
+      "email": "mart@gmail.com",
+      "mobile": "12345678978",
+      "password": "123",
+      "isApproved": false
+    }
+  ]
+}
