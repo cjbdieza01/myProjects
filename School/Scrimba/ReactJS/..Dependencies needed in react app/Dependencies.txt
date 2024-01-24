@@ -1,0 +1,53 @@
+Here are the dependencies you'll need to install React.js and the corresponding command to install them using PowerShell:
+
+1. Node.js: React.js is built on top of Node.js, so you'll need to install it first. You can download the installer from the official Node.js website (https://nodejs.org) and follow the installation instructions.
+
+2. Create React App: Create React App is a popular tool for quickly setting up a new React project with a predefined folder structure and build configuration. To install it, open PowerShell and run the following command:
+
+   ```
+   npm install -g create-react-app
+   ```
+
+   This command installs Create React App globally on your system, allowing you to use it from any directory.
+
+Once you have these dependencies installed, you can create a new React.js project using Create React App. To do that, navigate to the directory where you want to create your project using the `cd` command. For example, if you want to create a project in a folder named "my-react-app," you can run:
+
+```
+cd path/to/my-react-app
+```
+
+Then, to create a new React.js project, run the following command:
+
+```
+npx create-react-app .
+```
+
+The `.` at the end ensures that the project is created in the current directory. This command initializes a new React.js project with the necessary files and folder structure.
+
+After the project is created, you can navigate into its directory using `cd my-react-app` (replace "my-react-app" with the actual folder name if different) and start the development server with the following command:
+
+```
+npm start
+```
+
+This will start the development server and open your React.js application in a web browser. You can then begin building your React components and writing your application code.
+
+I hope this helps you get started with React.js! Let me know if you have any further questions.
+
+
+
+Router
+npm install react-router-dom
+
+Step-by-step
+npm install -g create-react-app
+npx create-react-app my-app
+
+Commands
+npm start - Starts the development server.
+npm run build - Bundles the app into static files for production
+npm test - starts the test runner
+npm run eject - removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can't go back
+Suggested to begin by typing:
+cd my-app
+npm start

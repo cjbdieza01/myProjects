@@ -1,0 +1,344 @@
+:root {
+    --blue: #00307d;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black: #222;
+    --black2: #999
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0px 0; 
+    margin: 0 auto;
+}
+
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: var(--black2);
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers ,
+.cardBox .card:hover .cardName ,
+.cardBox .card:hover .iconBx {
+    color: var(--white);
+}
+
+.bottom-content {
+    height: 60vh;
+}
+
+.table-container {
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.bottom-content .card {
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+.visible-results {
+    cursor: pointer;
+}
+.visible-results:hover {
+    color: blue;
+}
+
+#logoutTab:hover {
+    cursor: pointer;
+}
+
+.user-profilePic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+#bell-dot {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: -7px;
+    left: 17px;
+}
+
+#bell-notif {
+    cursor: pointer;
+}
+
+#new-client-btn, 
+.modalBtn {
+    background-color: var(--blue);
+    color: white !important;
+}
+
+#new-client-btn:hover,
+.modalBtn:hover {
+    background-color: #004bc4;
+}
+
+#newClientModalDialog,
+#loanHistoryModalDialog,
+#updateClientInfoDialog {
+    max-width: none !important;
+    width: 700px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+#clientDisplayInfo {
+    position: relative;
+    background: var(--white);
+    border-radius: 20px;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    height: 65vh;
+}
+
+#listClients thead tr:first-child th,
+#paymentHistory thead tr:first-child th{
+    color: var(--blue);
+}
+
+.blue-text strong {
+    color: var(--blue);
+}
+
+.client-btn {
+    background-color: var(--white);
+    color: black;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--blue);
+}
+
+.client-btn:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
+}
+
+#clientMiddle-Info {
+    width: 100%; 
+    height: 40%; 
+    padding-right: 20px; 
+    padding-left: 10px;
+}
+
+.middle-container {
+    border: solid 5px; 
+    height: 100%; 
+    border-color: #00307d;
+}
+
+.lower-client {
+    width: 100%; 
+    height: 20%; 
+    padding-right: 5px;
+}
+
+#clientPaymentHistory {
+    height: 100%; 
+    border-left: solid 1px;
+}
+
+.modal-header {
+    background-color: var(--blue);
+    color: white !important;
+}
+
+.collectors-container {
+    flex-direction: column;
+}
+.collectors-container .header-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 3px;
+}
+
+.collectors-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.header-2 div {
+    font-weight: bold;
+}
+
+.main-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: auto;
+}
+
+.tableHeader tr th {
+    background-color: var(--blue);
+    color: white;
+}
+
+.collectors-card {
+    border-radius: 10px;
+    box-shadow: 0 0 3px 2px rgba(96, 96, 96, 0.3);
+}
+.collectors-card:hover {
+    box-shadow: 0 0 4px 3px rgba(96, 96, 96, 0.5);
+    cursor: pointer;
+}
+
+.for-approval-loan-card {
+    max-height: 35vh;
+    height: 35vh;
+}
+
+.for-approval-loan-card table {
+    overflow-y: auto;
+}
+
+.approvalSection {
+    padding: 10px;
+    overflow: scroll;
+}
+
+#forApprovalsAccordion {
+    border: solid 1px;
+    box-shadow: 0 0 4px 3px rgba(96, 96, 96, 0.5);
+}
+
+.accor-body {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+    } 
+    
+    .min-vh-100 {
+        min-height: 10px
+        !important;
+    }
+    .cardBox {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr); 
+        
+    }
+    .bottom-content {
+        width: 145%;
+    }
+    .col-sm-3.card {
+        display: none;
+      }
+      
+      #transaction-search .form-control{
+       margin-left: 10px;
+      }
+      .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: right;
+        background-image: var(--bs-navbar-toggler-icon-bg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 100%;
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+    } 
+    .cardBox {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr); 
+        
+    }
+      
+      #transaction-search .form-control{
+       margin-left: 10px;
+      }
+}
+
+
+@media only screen and (min-width:769px){
+    .wrapper {
+        width: 100%;
+    } 
+    
+    
+}
+
+
+@media only screen and (min-width: 992px){
+    .wrapper {
+        width: 100%;
+    } 
+    
+    #transaction-search .form-control{
+        margin-left: 30px;
+       }
+    
+}
+
+
+@media only screen and (min-width: 1200px){
+    .wrapper {
+        width: 100%;
+    } 
+    #transaction-search .form-control{
+        margin-left: 30px;
+       }
+    
+}
+
+
+

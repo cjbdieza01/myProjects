@@ -1,0 +1,147 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    max-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc107;
+  }
+  
+  /* Main Content */
+  .main-container {
+    padding: 30px;
+    
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .profile-image img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #333;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Projects Section */
+  .project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+  }
+  
+  .project h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .project p {
+    color: #666;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 24px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .main-container {
+      padding: 20px;
+    }
+  
+    .project {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .profile-image img {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .project {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .profile-image img {
+      width: 120px;
+    }
+  }
+  

@@ -1,0 +1,1 @@
+// Ways to declare variables

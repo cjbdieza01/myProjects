@@ -1,0 +1,32 @@
+Diploma in HTML5, CSS3 and JavaScript Course Resource Files and Links
+
+Download resource files for this course from the Resource section of the course.
+
+
+
+To open the HTML5 Validator click here.
+
+http://html5.validator.nu
+
+
+To access the HTML5: Edition for Web Authors click here.
+
+https://www.w3.org/TR/html5-author/
+
+
+To download the Visual Web Developer Express Edition click here.
+
+https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx
+
+
+To open the jQuery website click here.
+
+http://jquery.com
+
+
+To open the jQuery UI website click here.
+
+https://jqueryui.com/
+
+
+

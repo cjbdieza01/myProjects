@@ -1,0 +1,41 @@
+Notes for You:: Traversing an Array in JavaScript
+- means accessing each element in the array for a specific purpose.
+Ex:
+- Displaying each element in the array
+- Searching for an element in the array
+- Sorting an array in ascending order
+- Sorting an array in descending order
+- etc. etc.
+
+How to create an Array using Literal Notation:
+Syntax:
+var arrayName = [comma separated list of values]; 
+Ex:
+var  studNames = [“Ram”,”Ravi”,”Raju”,”Raghu”,”Gopal”]; 
+
+
+How to get value of an array element: 
+- We can get value of an array element by its index. 
+Syntax:
+arrayName[index]
+Ex:
+document.write( studNames[0] ); // Ram
+document.write( "&lt;br/&gt;" );
+
+
+Example Code:Traversing a JavaScript Array using for loop
+
+ var studNames = ["Ram","Ravi","Raju","Raghu"];
+
+ for(var i=0; i&lt;studNames.length; i++)
+ {
+  document.write(studNames[i]);
+  document.write("&lt;br/&gt;");
+ }
+
+Note:
+- replace &lt; with less-than symbol.
+- replace &gt; with greater-than symbol.
+
+
+=========================================

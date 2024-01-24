@@ -1,0 +1,133 @@
+// Data Types
+
+
+
+
+//Primitive Data Types
+Certainly! JavaScript has several primitive data types, which are simple, immutable data types that represent basic values. Understanding these data types is fundamental to working with JavaScript. Here are the main JavaScript primitive data types:
+
+1. **Number**: Represents both integer and floating-point numbers. Examples:
+
+   ```javascript
+   let num1 = 42;      // Integer
+   let num2 = 3.14;    // Floating-point
+   ```
+
+2. **String**: Represents a sequence of characters enclosed in single or double quotes. Examples:
+
+   ```javascript
+   let str1 = 'Hello, World!';
+   let str2 = "JavaScript";
+   ```
+
+3. **Boolean**: Represents a binary value, either `true` or `false`, used for logical operations and conditions. Examples:
+
+   ```javascript
+   let isTrue = true;
+   let isFalse = false;
+   ```
+
+4. **Undefined**: Represents a variable that has been declared but has no assigned value. A function without a `return` statement also returns `undefined`. Example:
+
+   ```javascript
+   let undefinedVar;
+   ```
+
+5. **Null**: Represents the intentional absence of any object value or no value at all. Example:
+
+   ```javascript
+   let emptyValue = null;
+   ```
+
+6. **Symbol** (ES6): Represents a unique and immutable value, often used as object property keys to prevent naming conflicts. Example:
+
+   ```javascript
+   const uniqueSymbol = Symbol('description');
+   ```
+
+7. **BigInt** (ES11/ES2020): Represents large integers beyond the capability of the Number type. You can create BigInts by appending `n` to a number. Example:
+
+   ```javascript
+   const bigIntNum = 1234567890123456789012345678901234567890n;
+   ```
+
+8. **Primitive wrapper objects**: These are not exactly primitive types but are objects created by JavaScript to provide methods and properties for primitive values. They are `String`, `Number`, and `Boolean`. When you access a property or method on a primitive value, JavaScript temporarily wraps the value in its corresponding wrapper object.
+
+   ```javascript
+   let str = 'Hello';
+   let strLength = str.length; // Accessing a property through a wrapper object
+   ```
+
+It's important to note that primitive types are passed by value, which means that when you assign a primitive value to a variable or pass it as a function argument, a copy of the value is created. This copy is independent of the original value. This is different from non-primitive types (objects, arrays, functions), which are passed by reference, meaning they refer to the same object in memory.
+
+Understanding these primitive data types is crucial for working with JavaScript effectively, as they form the basis for all data manipulation and computation in the language.
+
+
+
+// Reference Types
+In JavaScript, reference types, also known as non-primitive or complex data types, are more complex data structures that can hold multiple values and are not stored directly in the variable; instead, a reference (memory address) to the actual data is stored. When you work with reference types, you are working with references to the underlying data, not the data itself. Here are the main reference types in JavaScript:
+
+1. **Object**: Objects are collections of key-value pairs and represent complex data structures. They can hold various data types as values, including other objects, functions, and primitive values.
+
+   ```javascript
+   let person = {
+     firstName: "John",
+     lastName: "Doe",
+     age: 30
+   };
+   ```
+
+2. **Array**: Arrays are ordered collections of values, and each value can be of any data type. Arrays are indexed using numerical indices, starting from 0.
+
+   ```javascript
+   let fruits = ["apple", "banana", "orange"];
+   ```
+
+3. **Function**: Functions are first-class citizens in JavaScript and are also considered reference types. You can define functions and pass them as arguments to other functions or assign them to variables.
+
+   ```javascript
+   function add(a, b) {
+     return a + b;
+   }
+   ```
+
+4. **Date**: Date objects represent dates and times and provide various methods for working with dates and performing date calculations.
+
+   ```javascript
+   let currentDate = new Date();
+   ```
+
+5. **RegExp**: Regular expression objects are used for pattern matching and text manipulation.
+
+   ```javascript
+   let pattern = /hello/i; // Case-insensitive regular expression for matching "hello"
+   ```
+
+6. **Map** (ES6): Map objects are collections of key-value pairs, similar to objects. However, they have a few advantages, such as maintaining the order of keys and allowing keys of any data type.
+
+   ```javascript
+   let myMap = new Map();
+   myMap.set("name", "Alice");
+   myMap.set("age", 25);
+   ```
+
+7. **Set** (ES6): Set objects are collections of unique values, which means they do not allow duplicate values.
+
+   ```javascript
+   let mySet = new Set([1, 2, 3, 2, 1]); // Contains only unique values
+   ```
+
+8. **Promise** (ES6): Promises are used for asynchronous programming and represent a value that might not be available yet but will be at some point in the future.
+
+   ```javascript
+   let fetchData = new Promise((resolve, reject) => {
+     // Asynchronous operation
+     if (/* operation successful */) {
+       resolve(result);
+     } else {
+       reject(error);
+     }
+   });
+   ```
+
+Reference types are more versatile than primitive types and allow you to create complex data structures and perform various operations on them. When you work with reference types, it's important to understand how references work, especially when it comes to passing these types as function arguments or assigning them to other variables, as it can lead to unexpected behavior if you're not aware of the underlying reference mechanism.

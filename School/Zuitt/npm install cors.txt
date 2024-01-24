@@ -1,0 +1,14 @@
+npm install cors
+npm install express mongoose
+npm instal bcrypt
+npm install jsonwebtoken
+
+
+
+//render link
+https://dieza-281.onrender.com
+
+
+
+// React
+npx install -g create-react-app

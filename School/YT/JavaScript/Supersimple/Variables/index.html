@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="showQuantity()">Show Quantity</button>
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="addToCart(2)">+2</button>
+        <button onclick="addToCart(3)">+3</button>
+        <button onclick="reset()">Reset Cart</button>
+    </div>
+    <div>
+        <span id="cartQuantity">0</span>
+    </div>
+
+
+
+    <script>
+
+        let cartQuantity = 0;
+
+        function showQuantity() {
+            alert(`Items on the cart: ${cartQuantity}`)
+        }
+
+        function addToCart(quantity = 1) {
+            alert(`${quantity} items added to your cart`)
+            cartQuantity += quantity;
+            cartDisplay();
+        }
+
+        function cartDisplay() {
+            const itemsCount = document.getElementById("cartQuantity");
+            itemsCount.textContent = cartQuantity;
+        }
+
+        function reset() {
+            cartQuantity = 0;
+            cartDisplay();
+            alert('cart has been reset')
+        }
+
+
+    </script>
+</body>
+
+</html>

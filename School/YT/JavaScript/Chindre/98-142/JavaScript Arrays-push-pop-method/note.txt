@@ -1,0 +1,55 @@
+Notes for You:: JavaScript Array Methods push() and pop()
+
+push() Method:
+- adds one or more elements to the end of the array
+- and returns the new length of the array
+
+Syntax:
+push(... args): number
+where:
+... args: indicates one or more elements
+number: indicates new length of the array
+
+
+pop() Method:
+- removes the element at the end of the array
+- and returns the element which is removed from the array
+
+Syntax:
+pop():*
+where:
+*: indicates element at the end of the array
+
+
+Example Code:
+ var studNames = ["Ram","Ravi","Raju","Raghu","Gopal"];
+
+ document.write(studNames); // Ram, Ravi, Raju, Raghu, Gopal
+ document.write("&lt;br/&gt;");
+ document.write(studNames.length); // 5
+ document.write("&lt;br/&gt;");
+ document.write("&lt;br/&gt;");
+
+ document.write( studNames.push("Hitesh") ); // 6
+ document.write("&lt;br/&gt;");
+ document.write(studNames); // Ram, Ravi, Raju, Raghu, Gopal, Hitesh
+ document.write("&lt;br/&gt;");
+ document.write("&lt;br/&gt;");
+
+ document.write( studNames.pop() ); // Hitesh
+ document.write("&lt;br/&gt;");
+ document.write(studNames); // Ram, Ravi, Raju, Raghu, Gopal
+ document.write("&lt;br/&gt;");
+ document.write("&lt;br/&gt;");
+
+ document.write( studNames.pop() ); // Gopal
+ document.write("&lt;br/&gt;");
+ document.write(studNames); // Ram, Ravi, Raju, Raghu
+ document.write("&lt;br/&gt;");
+ document.write("&lt;br/&gt;");
+
+Note:
+- replace &lt; with less-than symbol.
+- replace &gt; with greater-than symbol.
+ 
+=========================================

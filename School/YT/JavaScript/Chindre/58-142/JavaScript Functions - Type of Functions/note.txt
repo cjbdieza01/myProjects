@@ -1,0 +1,61 @@
+Notes for You:: JavaScript Types of Function.
+- Any function created using different ways of creating JavaScript functions, will be of one of the below mentioned type.
+
+
+1. A function without parameters and without returning value:
+Ex:
+function wishHi(){
+ document.write( "Hi" , "&lt;br/&gt;" );
+}
+wishHi(); // Hi
+
+
+2. A function without parameters and with returning value:
+Ex:
+function wishHi(){
+return "Hi";
+}
+document.write(wishHi()); // Hi
+
+
+3. A function with parameters and without returning value:
+Ex:
+function wish(what){
+ document.write( what , "&lt;br/&gt;" );
+}
+wish(“good morning"); // good morning
+
+Ex:
+function add(num1,num2){
+ document.write( num1 + num2 , "&lt;br/&gt;" );
+}
+add(2,2); // 4
+
+
+4. A function with parameters and with return value:
+Ex:
+function square(x){
+ return (x*x);
+}
+document.write(square(5)); // 25
+
+
+Note:
+- replace &lt; with less-than symbol.
+- replace &gt; with greater-than symbol.
+
+=========================================
+
+Follow the link for next video: 
+JavaScript Tutorial 59 - Function Expressions in JavaScript | JavaScript Function Expressions
+  
+
+ • JavaScript Functi...  
+
+Follow the link for previous video: 
+JavaScript Tutorial 57 - Functions in JavaScript | JavaScript Function Declaration
+  
+
+ • JavaScript Functi...  
+
+=========================================

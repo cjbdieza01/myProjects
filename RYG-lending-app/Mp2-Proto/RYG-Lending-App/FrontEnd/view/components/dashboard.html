@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../componentsCSS/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../fontawesome-free-6.4.2-web/css/all.css">
+    <title>RYG Finance</title>
+    <link rel="icon" href="images/rygicon-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="sidebar col-lg-2 min-vh-100 d-flex flex-column justify-content-between" style="background-color: #00307d;">
+                    <div class="mt-4" id="sideNavbar">
+                        <a class="d-flex text-decoration-none mt-1 align-items-center text-white">
+                            <img src="images/rygv3-removebg-preview.png" style="width: 250px; height: 60px;">
+                        </a>
+                        <hr class="text-white"/>
+                        <ul class="nav nav-pills flex-column mt-4">
+                            <li class="nav-item py-2 py-sm-0">
+                                <a class="nav-link text-white active" href="../components/dashboard.html">
+                                    <i class="fa-solid fa-gauge fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-0">
+                                <a class="nav-link text-white" href="../components/collectors.html">
+                                    <i class="fa-solid fa-users fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Collectors</span>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-0">
+                                <a class="nav-link text-white" href="../components/clientPortal.html">
+                                    <i class="fa-regular fa-file fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Client Portal</span>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-0">
+                                <a class="nav-link text-white" href="../components/forApproval.html">
+                                    <i class="fa-regular fa-folder-open fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">For Approval</span>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-0">
+                                <a class="nav-link text-white" href="../components/reports.html">
+                                    <i class="fa fa-folder-open"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Reports</span>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-0">
+                                <a id="logoutTab" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#confirmLogoutModal">
+                                    <i class="fa-solid fa-right-from-bracket fa-lg"></i><span class="fs-4 ms-3 d-none d-sm-inline text">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="left-content col-lg-10">
+                    <div class="tab-content col-12" id="tab-content">
+                        <div>
+                            <div class="row">
+                                <div class="d-flex justify-content-left flex-column col-lg-9">
+                                    <h1 style="color: #00307d;">Monthly Financial Summary </h1>
+                                    <h5 id="datetime"></h5>
+                                </div>
+                                <div class="col-lg-3 d-flex justify-content-center align-items-center" id="user-display" style="padding-top: 25px;"></div>
+                            </div> 
+                            <hr/>
+                            <div class="row">
+                                <div class="cardBox">
+                                    <div class="card">
+                                        <div>
+                                            <div class="numbers" id="totalCollections"></div>
+                                            <div class="cardName">Current Total Collection</div>
+                                        </div>
+                                        <div class="iconBx">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div>
+                                            <div class="numbers" id="totalRelease"></div>
+                                            <div class="cardName">Current Total Release</div>
+                                        </div>
+                                        <div class="iconBx">
+                                            <ion-icon name="cart-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div>
+                                            <div class="numbers" id="total-difference"></div>
+                                            <div class="cardName">Difference</div>
+                                        </div>
+                                        <div class="iconBx">
+                                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div>
+                                            <div class="numbers" id="total-clients"></div>
+                                            <div class="cardName">Total Clients</div>
+                                        </div>
+                                        <div class="iconBx">
+                                            <ion-icon name="cash-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bottom-content">
+                                    <div class="col-sm-8 card" style="margin-left: 20px;">
+                                        <div class="p-3 row">
+                                            <div class="col-sm-7">
+                                                <h4 style="color: #00307d;">Recent transactions:</h4>
+                                            </div>
+                                            <div class="col-sm-5 row" id="transaction-search">
+                                                <div class="col-sm-2 d-flex align-items-center justify-content-center" style="padding-left: 40px;">
+                                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                                </div>
+                                                <div class="col-sm-10 d-flex justify-content-center align-items-center">
+                                                    <input type="text" class="form-control" placeholder="Search.." aria-label="Search transactions" aria-describedby="basic-addon1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-container">
+                                            <table class="table" id="transactionsTable">
+                                                <thead id="table-header">
+                                                    <tr>
+                                                        <th scope="col">Date/Time</th>
+                                                        <th scope="col">Subject</th>
+                                                        <th scope="col"></th>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">Transaction Log</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="transactions-list"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                <div class="col-sm-3 card" style="margin-left: 50px;">
+                                    <div class="p-3">
+                                        <h4 style="color: #00307d;">New clients:</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="table" id="new-clients">
+                                            <thead id="table-header">
+                                                <tr>
+                                                    <th scope="col" colspan="3">Name/Location</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="newClient-list"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scriptsJS/dashboard.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+   
+    
+    
+

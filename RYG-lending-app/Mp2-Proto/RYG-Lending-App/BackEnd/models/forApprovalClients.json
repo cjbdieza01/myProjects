@@ -1,0 +1,38 @@
+{
+  "forApprovalClients": [
+    {
+      "id": 655018673,
+      "loanType": "Regular Loan",
+      "loans": [
+        {
+          "loanBrand": "New",
+          "loanId": 1699196892223652,
+          "date": "2023-10-29",
+          "dueDate": "2023-11-15",
+          "amount": 10000,
+          "payable": 12000,
+          "totalPayments": 0,
+          "runningBalance": 12000,
+          "term": 60,
+          "status": "For Approval"
+        }
+      ],
+      "firstName": "CJ",
+      "middleName": "Pogi",
+      "lastName": "Sudaria",
+      "spouseName": "Di Natin Alam",
+      "birthDate": "2023-11-05",
+      "cusEmail": "lyn@gmail.com",
+      "contact": "+639455704319",
+      "address": "sdfsdf",
+      "brgy": "1",
+      "municipality": "2",
+      "cusArea": "Area 54",
+      "userPicture": "blob:http://127.0.0.1:5500/41052e78-1fd7-4ea7-a98c-f6fb872f9597",
+      "userDocs": "blob:http://127.0.0.1:5500/a30af105-a776-4fe5-9dd8-be52a890af5a",
+      "assignedCollector": "none",
+      "paymentHistory": [],
+      "loanHistory": []
+    }
+  ]
+}

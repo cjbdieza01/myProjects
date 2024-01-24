@@ -1,0 +1,36 @@
+Notes for You:: JavaScript Increment and Decrement Operators Part2:
+- are used to increment or decrement a variable value by 1.
+
+++ (Increment Operator): 
+- is used to increment a variable value by 1
+- Post Increment: variableName ++
+- Pre Increment : ++ variableName
+
+-- (Decrement Operator): 
+- is used to decrement a variable value by 1
+- Post Decrement: variableName --
+- Pre Decrement : -- variableName
+
+Example Code2:
+var a=10;
+document.write("a=",a); //a=10 
+document.write("a=",a++); //a=10
+document.write("a=",a); //a=11 
+
+var a=10;
+document.write("a=",a); //a=10
+document.write("a=",++a); //a=11
+document.write("a=",a); //a=11
+
+var a=10;
+document.write("a=",a); //a=10
+document.write("a=",a--); //a=10
+document.write("a=",a); //a=9
+
+var a=10;
+document.write("a=",a); //a=10
+document.write("a=",--a); //a=9
+document.write("a=",a); //a=9
+
+
+=========================================

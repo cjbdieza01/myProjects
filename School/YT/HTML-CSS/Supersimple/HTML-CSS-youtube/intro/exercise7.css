@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container1 {
+    display: flex;
+}
+
+
+.img1 {
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.img2 {
+    margin: 20px;
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+}
+
+.img3 {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.input1 {
+    margin: 10px 20px 10px 10px;
+}
+
+.searchbox1 {
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid rgb(96, 96, 96);
+}
+
+.input2 {
+    margin: 10px 20px 10px 10px;
+    width: 100%;
+}
+
+.searchbox2 {
+    padding: 10px 20px 10px 20px;
+    width: 80%;
+    border: none;
+    box-shadow: 1px 1px 6px 1px rgba(96, 96, 96, 0.5);
+    border-radius: 30px;
+}
+
+.main-container3 {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+}
+
+.input3 {
+    margin: 30px 20px 10px 20px;
+    width: 50%;
+    justify-content: center;
+}
+
+.searchbox3 {
+    height: 35px;
+    width: 60%;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    
+}
+
+.header3 {
+    color: rgb(96, 96, 96);
+}
+
+.p1 {
+    color: rgb(96, 96, 96);
+    margin-top: 10px;
+    
+}
+
+.button3 {
+    margin: 10px 20px 10px 20px;
+    display: relative;
+    background: blue;
+    color: white;
+    border: none;
+    padding: 20px 39px 20px 30px;
+    border-radius: 50px;
+    
+}
+
+.parent-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

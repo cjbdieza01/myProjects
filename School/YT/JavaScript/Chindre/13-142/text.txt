@@ -1,0 +1,24 @@
+Naming conoventions for for Javascript variables and constants
+When it comes to naming variables and constants in JavaScript, it is important to follow certain conventions and rules to ensure code readability and maintainability. Here are some guidelines for naming conventions in JavaScript:
+
+1. **Use descriptive and meaningful names**: Choose names that accurately describe the purpose or content of the variable or constant. This makes your code more readable and helps others (including your future self) understand the code.
+
+2. **Start with a letter, underscore, or dollar sign**: Variable names must begin with a letter, an underscore (_), or a dollar sign ($). They cannot start with a number or any other special character.
+
+3. **Avoid using reserved keywords**: JavaScript has reserved keywords that have special meanings within the language and cannot be used as variable or constant names. Examples of reserved keywords include `if`, `for`, `while`, `function`, and `let`. You can find a complete list of reserved keywords in JavaScript documentation.
+
+4. **Follow camelCase or snake_case**: There are two common conventions for naming variables: camelCase and snake_case.
+
+   - **camelCase**: In camelCase, the first letter of the variable name starts with a lowercase letter, and the first letter of each subsequent concatenated word is capitalized. For example: `myVariableName`, `userName`, `numberOfItems`.
+   
+   - **snake_case**: In snake_case, the words are separated by underscores, and all letters are lowercase. For example: `my_variable_name`, `user_name`, `number_of_items`.
+   
+   It's generally recommended to use camelCase for variable and function names in JavaScript, as it is more commonly used in the JavaScript community.
+
+5. **Use meaningful abbreviations**: If you need to use abbreviations in your variable names, ensure that they are commonly understood and make the code more readable. For example, `maxNum` for "maximum number" or `prevBtn` for "previous button".
+
+6. **Be consistent**: Maintain consistency in your naming conventions throughout your codebase. If you choose to use camelCase for variables, stick to it consistently. This helps make your code more predictable and easier to understand.
+
+7. **Consider using uppercase for constants**: Constants are values that do not change during the execution of a program. By convention, constant names are often written in all uppercase letters, with words separated by underscores. For example: `MAX_WIDTH`, `PI`, `DEFAULT_COLOR`. While JavaScript does not enforce immutability for constants, using uppercase can indicate that a variable should not be reassigned.
+
+Remember that following these naming conventions is not only a best practice but also helps make your code more readable and maintainable for yourself and other developers working on the codebase.

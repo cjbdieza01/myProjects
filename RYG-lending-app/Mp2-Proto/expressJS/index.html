@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My First Front to Back Application</h1>
+    <button onclick="fetchUsers()">Fetch Users</button>
+
+    <h1> My first sample</h1>
+    <div id ="user-form">
+     <div class="name-container">
+         <label for="name">Name:</label>
+         <input type="text" name="name" id="name-id" placeholder="Enter your name">
+    </div>
+    <div class="username-container">
+     <label for="username">Username:</label>
+     <input type="text" name="username" id="username-id" placeholder="Enter your username">
+    </div>
+    <div class="password-container">
+     <label for="password">Password:</label>
+     <input type="password" name="password" id="password-id" placeholder="Enter your password">
+     </div>
+    </div>
+ 
+    <button class="btn-add" onclick="addUser()">Add User</button>
+ 
+    <table id="users-table">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            </tr> 
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
