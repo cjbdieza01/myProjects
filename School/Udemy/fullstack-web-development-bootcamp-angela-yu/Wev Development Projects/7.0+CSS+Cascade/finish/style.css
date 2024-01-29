@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.main-container {
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.secondary-container {
+    padding: 10px;
+    background-color: blue;
+    
+}
+
+
+
+h2 {
+    color: Yellow;
+}
+
+p {
+    padding: 10px;
+    color: white;
+    background-color: red;
+}

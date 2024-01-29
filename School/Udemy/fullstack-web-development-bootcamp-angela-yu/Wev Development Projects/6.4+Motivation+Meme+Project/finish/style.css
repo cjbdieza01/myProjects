@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.parent-div {
+    background-image: url(./assets/image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 700px;
+    align-items: center;
+    display: flex;
+}
+.child-div-1 {
+    color: black;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    margin: 10px;
+}
+
+.the-quote {
+    font-weight: 900;
+    color: black;
+    font-size: 2rem;
+    text-align: end;
+    text-transform: uppercase;
+}
