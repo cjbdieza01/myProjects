@@ -30,10 +30,11 @@ nav ul {
     justify-content: space-between;
 }
 
-section div {
+section > div {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    align-items: center;
 }
 
 section > div > div {
@@ -44,6 +45,7 @@ section > div > div {
     height: 200px;
     width: 250px;
     border-radius: 10px;
+    box-shadow: 0 0 4px 1px rgba(96, 96, 96, 0.6)
 }
 
 section div div ul {
@@ -56,4 +58,14 @@ section div div button {
     padding: 5px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    section > div {
+        flex-direction: column;
+    }
+
+    section > div > div {
+        margin-bottom: 100px;
+    }
 }
