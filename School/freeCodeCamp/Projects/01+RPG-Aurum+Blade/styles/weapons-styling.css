@@ -1,0 +1,40 @@
+#weapons {
+    display: none;
+    margin-top: 10px;
+}
+
+#weapons button {
+    padding: 0 5px 0 5px;
+}
+
+#stick {
+    background-color: rgba(168, 34, 34, 0.46);
+}
+
+#knife {
+    background-color: black;
+    color: white;
+}
+
+#steelSword {
+    background-color: rgb(77, 77, 77);
+    color: white;
+}
+
+#bronzeSword {
+    background-color: rgba(154, 100, 0, 0.365);
+    color: white;
+}
+
+#silverSword {
+    background-color: silver;
+}
+
+#goldenSword {
+    background-color: gold;
+}
+
+#dragonSword {
+    background-color: darkblue;
+    color: white;
+}

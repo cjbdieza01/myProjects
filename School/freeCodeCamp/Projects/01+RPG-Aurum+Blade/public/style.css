@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    gap: 1rem;
+    margin: 20px;
+}
+
+/* Character Styling */
+
+#character {
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text {
+    align-self: center;
+}
+
+.profile .profile-picture {
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin: 10px;
+    padding: 5px;
+}
+
+.action-buttons {
+    position: ;
+    margin: auto 10px 10px 10px;
+}
+
+/* Stats styling */
+
+#details {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.stats-text {
+    align-self: center;
+}
+
+.stats-details-container {
+    display: flex;
+    flex-direction: row;
+}
+.stats-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-details-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.stats-attributes-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.stats-attributes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-attributes-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+#field {
+    background-color: lightcoral;
+    grid-area: 1/2/3/4;
+}
+
+#monsterStats {
+    display: none;
+}
