@@ -1,0 +1,38 @@
+#armors {
+    display: none;
+    margin-top: 10px;
+}
+
+
+#armors button {
+    padding: 0 5px 0 5px;
+}
+
+#woodenArmor {
+    background-color: rgba(168, 34, 34, 0.46);
+}
+
+#steelArmor {
+    background-color: black;
+    color: white;
+}
+
+#bronzeArmor {
+    background-color: rgba(154, 100, 0, 0.365);
+    color: white;
+}
+
+#silverArmor {
+    background-color: silver;
+    color: white;
+}
+
+
+#goldenArmor {
+    background-color: gold;
+}
+
+#dragonArmor {
+    background-color: darkblue;
+    color: white;
+}

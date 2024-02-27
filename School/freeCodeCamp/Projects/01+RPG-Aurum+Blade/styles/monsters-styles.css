@@ -1,0 +1,18 @@
+#monsterField {
+    display: none;
+}
+
+.easyMonsters {
+    background-color: #ffe2ac;
+    color: white;
+}
+
+.mediumMonsters {
+    background-color: rgb(254, 205, 115);
+    color: white;
+}
+
+.hardMonsters {
+    background-color: orangered;
+    color: white;
+}

@@ -8,6 +8,10 @@
     font-family: "Work Sans", sans-serif;
 }
 
+button {
+    width: 100%;
+}
+
 #mainContainer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -106,8 +110,19 @@
 #field {
     background-color: lightcoral;
     grid-area: 1/2/3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #monsterStats {
     display: none;
 }
+
+/* Bag Styling */
+.bag {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 0 10px 0 10px;
+}
+

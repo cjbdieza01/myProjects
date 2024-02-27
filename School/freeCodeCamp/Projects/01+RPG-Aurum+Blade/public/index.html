@@ -12,7 +12,10 @@
 		/>
 		<link rel="stylesheet" href="./style.css" />
 		<link rel="stylesheet" href="../styles/game-styling.css" />
-		<link rel="stylesheet" href="../styles/weapons-styling.css">
+		<link rel="stylesheet" href="../styles/weapons-styling.css" />
+		<link rel="stylesheet" href="../styles/armors-styling.css" />
+		<link rel="stylesheet" href="../styles/bag-styling.css" />
+		<link rel="stylesheet" href="../styles/monsters-styles.css">
 	</head>
 	<body>
 		<div id="mainContainer">
@@ -51,6 +54,8 @@
 				<div class="action-buttons">
 					<button type="button" class="btn btn-warning">Levelup</button>
 					<button type="button" class="btn btn-warning">Farm</button>
+					<button type="button" class="btn btn-success">Bag</button>
+					<button type="button" class="btn btn-info">Stats</button>
 				</div>
 			</div>
 			<!-- Profile Container End -->
@@ -60,8 +65,8 @@
 				<div id="game">
 					<div id="field-stats">
 						<span class="stat-health"
-							>HEALTH: <strong><span id="healthText">100</span></strong></span
-						>
+							>HEALTH: <strong><span id="healthText"></span></strong
+						></span>
 					</div>
 					<div id="controls">
 						<button id="button1">Store</button>
@@ -91,6 +96,28 @@
 						<button id="goldenSword">Golden Sword(2000)</button>
 						<button id="dragonSword">Dragon Sword(5000)</button>
 					</div>
+					<div id="armors">
+						<div class="armors">
+							<button id="woodenArmor">Wooden Armor(50)</button>
+							<button id="steelArmor">Steel Armor(500)</button>
+							<button id="bronzeArmor">Bronze Armor(1000)</button>
+							<button id="silverArmor">Silver Armor(1200)</button>
+							<button id="goldenArmor">Golder Armor(2000)</button>
+							<button id="dragonArmor">Dragon Armor(5000)</button>
+						</div>
+					</div>
+					<div id="monsterField">
+						<button class="monsterButton" id="slime">Slime</button>
+						<button class="monsterButton" id="lizzard">Lizzard</button>
+						<button class="monsterButton" id="fangedBeast">Fanged Beast</button>
+						<button class="monsterButton" id="wolf">Wolf</button>
+						<button class="monsterButton" id="threeHeadedSnake">Three Headed Snake</button>
+						<button class="monsterButton" id="robot">Robot</button>
+						<button class="monsterButton" id="dragon">Dragon</button>
+					</div>
+				</div>
+				<div class="bag">
+					<div id="bagText">empty</div>
 				</div>
 			</div>
 			<!-- Field End -->
@@ -122,11 +149,6 @@
 				</div>
 			</div>
 		</div>
-
-
-		
-
-
 
 		<script type="text/javascript" src="script.js"></script>
 		<script

@@ -1,11 +1,15 @@
 let xp = 0;
-let gold = 1500;
-let health = 100;
+let gold = 2500;
+let health = 200;
 let atk = 10;
 let def = 5;
+let maxHealth = 2500;
 let fighting;
-let inventory = ["Wooden Stick"];
+let inventory = [];
 let monsterHealth;
+let loots;
+
+
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -22,100 +26,123 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weaponLists = document.querySelector("#weapons");
+const armorLists = document.querySelector("#armors")
+const monsterField = document.querySelector("#monsterField");
+const bag = document.querySelector("#bagText");
+bag.innerText = inventory;
+healthText.innerText = health;
+goldText.innerText = gold;
+atkText.innerText = atk;
+
+const stick = document.querySelector("#stick");
+const knife = document.querySelector("#knife");
+const steelSword = document.querySelector("#steelSword");
+const silverSword = document.querySelector("#silverSword");
+const goldenSword = document.querySelector("#golderSword");
+const dragonSword = document.querySelector("#dragonSword");
+
+const slime = document.querySelector("#slime");
+const lizzard = document.querySelector("#lizzard");
+const fangedBeast = document.querySelector("#fangedBeast");
+const wolf = document.querySelector("#fangedBeast");
+const threeHeadedSnake = document.querySelector("#threeHeadedSnake");
+const robot = document.querySelector("robot");
+const dragon = document.querySelector("#dragon");
+
 
 const weapons = [
     {
         name: "Stick",
-        atk: 5
+        atk: 50,
     },
     {
         name: "Knife",
-        atk: 10
+        atk: 100
     },
     {
         name: "Steel Sword",
-        atk: 20
+        atk: 200
     },
     {
         name: "Bronze Sword",
-        atk: 30
+        atk: 300
     },
     {
         name: "Silver Sword",
-        atk: 50
+        atk: 500
     },
     {
         name: "Golden Sword",
-        atk: 70
+        atk: 700
     },
     {
         name: "Dragon Sword",
-        atk: 100
+        atk: 1000
     }
 ];
 
 const armor = [
     {
         name: "Wooden Armor",
-        def: 5
-    },
-    {
-        name: "Steel Armor",
-        def: 10
-    },
-    {
-        name: "Silver Armor",
-        def: 30
-    },
-    {
-        name: "Bronze Armor",
         def: 50
     },
     {
+        name: "Steel Armor",
+        def: 100
+    },
+    {
+        name: "Silver Armor",
+        def: 300
+    },
+    {
+        name: "Bronze Armor",
+        def: 500
+    },
+    {
         name: "Golden Armor",
-        def: 70
+        def: 700
     },
     {
         name: "Dragon Armor",
-        def: 100
+        def: 1000
     }
 ]
 
 const monsters = [
     {
         name: "Slime",
-        power: 5,
-        health: 10
-    },
-    {
-        name: "Lizzard",
-        power: 10,
-        health: 20
-    },
-    {
-        name: "Fanged Beast",
-        power: 30,
-        health: 60
-    },
-    {
-        name: "Wolf",
         power: 50,
         health: 100
     },
     {
-        name: "Three Headed Snake",
+        name: "Lizzard",
         power: 100,
-        health: 200
+        health: 2000
+    },
+    {
+        name: "Fanged Beast",
+        power: 300,
+        health: 6000
+    },
+    {
+        name: "Wolf",
+        power: 500,
+        health: 10000
+    },
+    {
+        name: "Three Headed Snake",
+        power: 1000,
+        health: 20000
     },
     {
         name: "Robot",
-        power: 150,
-        health: 300
+        power: 1500,
+        health: 30000
     },
     {
         name: "Dragon",
-        power: 200,
-        health: 500
+        power: 2000,
+        health: 50000
     }
 ];
 
@@ -134,7 +161,9 @@ const scene = [
     },
     {
         name: "dungeon",
-        buttonText: ["Easy", "Medium", "Hard"]
+        buttonText: ["Easy", "Medium", "Hard", "Back to town"],
+        buttonFunc: [easyMonster, mediumMonster, hardMonster, goTown],
+        text: "You are in the dungeon"
     },
     {
         name: "machine",
@@ -149,9 +178,16 @@ button2.onclick = goDungeon;
 button3.onclick = goMachine;
 button4.onclick = goTown;
 
+stick.onclick = buyStick;
+knife.onclick = buyKnife;
+
+woodenArmor.onclick = buyWoodenArmor;
+
 function update(location) {
     button4.style.display = "none";
     weaponLists.style.display = "none";
+    armorLists.style.display = "none";
+    monsterField.style.display = "none";
     button1.innerText = location.buttonText[0];
     button2.innerText = location.buttonText[1];
     button3.innerText = location.buttonText[2];
@@ -162,6 +198,13 @@ function update(location) {
     text.innerText = location.text;
 }
 
+function updateStats() {
+    goldText.innerText = gold;
+    healthText.innerText = health;
+    atkText.innerText = atk;
+    defText.innerText = def;
+}
+
 function goStore() {
     update(scene[1]);
     button4.style.display = "inline-block";
@@ -169,44 +212,51 @@ function goStore() {
 }
 
 function goDungeon() {
-    console.log("Dungeon");
+    update(scene[2]);
+    button4.style.display = "inline-block";
 }
+
 
 function goMachine() {
     console.log("Machine");
 }
 
 function goTown() {
-    update(scene[0]);
+    // armorLists.style.display = "none";
     button4.style.display = "none";
+    update(scene[0]);
 }
 
 function buyHealth() {
-    if (gold >= 50) {
-        health += 50;
-    gold -= 50;
     weaponLists.style.display = "none";
     text.style.display = "block";
-    text.innerText = "You bought 50 Health";
-    goldText.innerText = gold;
-    healthText.innerText = health;
+
+    if (gold >= 50) {
+        if (health < maxHealth) {
+            const healthToBuy = Math.min(50, maxHealth - health);
+
+            text.innerText = `You bought ${healthToBuy} Health`;
+            health += healthToBuy;
+            gold -= 50;
+            updateStats();
+
+        } else {
+            text.innerText = "Health Full";
+            healthText.innerText = health;
+        }
     } else {
-        weaponLists.style.display = "none"
+        weaponLists.style.display = "none";
         text.style.display = "block";
         text.innerText = "Not enough gold";
     }
-    
 }
+
 
 function buyWeapon() {
-    text.style.display = "none";
+    armorLists.style.display = "none";
     weaponLists.style.display = "block"
-
 }
 
-function buyArmor() {
-    console.log("Buy Armor")
-}
 
 function pickTwo() {
     console.log("Pick Two")
@@ -216,6 +266,125 @@ function pickEight() {
     console.log("Pick Eight");
 }
 
-function buyKnife() {
 
+function buyArmor() {
+    weaponLists.style.display = "none";
+    armorLists.style.display = "block";
+}
+
+function buyStick() {
+    let stickPrice = 500;
+    if (gold >= stickPrice) {
+        let boughtWeapon = weapons[0];
+        gold -= stickPrice;
+        inventory.push(boughtWeapon);
+        atk += boughtWeapon.atk;
+        text.innerText = `You bought ${boughtWeapon.name}`;
+        text.style.display = "block";
+        bag.innerText += boughtWeapon.name + "\n";
+        updateStats();
+    } else {
+        text.innerText = "You don't have enough gold";
+    }
+}
+
+function buyKnife() {
+    let knifePrice = 1000;
+    if (gold >= knifePrice) {
+        let boughtWeapon = weapons[1];
+        gold -= knifePrice
+        inventory.push(boughtWeapon);
+        atk += boughtWeapon.atk;
+        text.style.display = "block";
+        text.innerText = `You bought ${boughtWeapon.name}`;
+        bag.innerText += boughtWeapon.name + "\n";
+        updateStats()
+    } else {
+        text.innerText = "You don't have enough gold!"
+    }
+}
+
+function buyWoodenArmor() {
+    let woodenArmorPrice = 1000;
+    if (gold >= woodenArmorPrice) {
+        let boughtArmor = armor[0];
+        gold -= woodenArmorPrice;
+        inventory.push(boughtArmor);
+        def += boughtArmor.def;
+        text.style.display = "block";
+        text.innerText = `You bought ${boughtArmor.name}`;
+        bag.innerText += boughtArmor.name + "\n";
+        updateStats()
+    } else {
+        text.innerText = "You don't have enough gold";
+    }
+}
+
+
+
+
+let monsterButton = monsterField.querySelectorAll(".monsterButton");
+function removeMediumMonstersClass() {
+    for (let x = 0; x < monsterButton.length; x++) {
+        monsterButton[x].classList.remove("mediumMonsters")
+    }
+}
+
+function removeEasyMonsterClass() {
+    for (let x = 0; x < monsterButton.length; x++) {
+        monsterButton[x].classList.remove("easyMonsters")
+    }
+}
+
+function removeHardMonstersClass() {
+    for (let x = 0; x < monsterButton.length; x++) {
+        monsterButton[x].classList.remove("hardMonsters")
+    }
+}
+
+function easyMonster() {
+    monsterField.style.display = "block";
+    removeHardMonstersClass();
+    removeMediumMonstersClass();
+    monsterButton.forEach(function (e) {
+        e.classList.add("easyMonsters");
+    })
+    let easyPower = monsters.map(e => e.power * 0.5);
+    let charAtk = atk;
+    console.log(monsterButton);
+    
+    const monsterButtons = document.querySelectorAll(".monsterButton.easyMonsters");
+
+    monsterButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            handleMonsterButtonClick(index);
+        });
+    });
+
+    function handleMonsterButtonClick(index) {
+        console.log(`Button at index ${index} clicked.`);
+        // Now you can use the index as needed
+        // For example, you can access the corresponding monster in the monsters array
+        const clickedMonster = monsters[index];
+        console.log("Clicked monster:", clickedMonster);
+    }
+
+}
+
+function mediumMonster() {
+    monsterField.style.display = "block";
+    removeEasyMonsterClass();
+    removeHardMonstersClass();
+    monsterButton.forEach(function (element) {
+        element.classList.add("mediumMonsters")
+    })
+}
+
+function hardMonster() {
+    monsterField.style.display = "block";
+    removeEasyMonsterClass();
+    removeMediumMonstersClass();
+    monsterButton.forEach(function (element) {
+        element.classList.add("hardMonsters")
+    })
 }
