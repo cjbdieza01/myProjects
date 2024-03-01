@@ -4,7 +4,7 @@
 
 .easyMonsters {
     background-color: #ffe2ac;
-    color: white;
+    color: black;
 }
 
 .mediumMonsters {
@@ -15,4 +15,8 @@
 .hardMonsters {
     background-color: orangered;
     color: white;
+}
+
+#monsterStats {
+    display: none;
 }

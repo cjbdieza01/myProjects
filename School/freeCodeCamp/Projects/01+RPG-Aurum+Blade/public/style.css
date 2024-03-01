@@ -57,6 +57,9 @@ button {
     position: ;
     margin: auto 10px 10px 10px;
 }
+/* Character styling end */
+
+
 
 /* Stats styling */
 
@@ -107,6 +110,8 @@ button {
     text-align: end;
 }
 
+/* Field Styling */
+
 #field {
     background-color: lightcoral;
     grid-area: 1/2/3/4;
@@ -115,14 +120,14 @@ button {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-#monsterStats {
-    display: none;
+#field {
+    padding: 20px;
 }
 
-/* Bag Styling */
-.bag {
-    padding: 10px;
-    border: 2px solid black;
-    margin: 0 10px 0 10px;
+#text {
+    padding: 20px;
 }
+
+
+
 

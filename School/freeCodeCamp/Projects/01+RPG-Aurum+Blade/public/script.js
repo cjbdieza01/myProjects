@@ -4,7 +4,6 @@ let health = 200;
 let atk = 10;
 let def = 5;
 let maxHealth = 2500;
-let fighting;
 let inventory = [];
 let monsterHealth;
 let loots;
@@ -163,7 +162,7 @@ const scene = [
         name: "dungeon",
         buttonText: ["Easy", "Medium", "Hard", "Back to town"],
         buttonFunc: [easyMonster, mediumMonster, hardMonster, goTown],
-        text: "You are in the dungeon"
+        text: "You are in the dungeon. Select Monster Level"
     },
     {
         name: "machine",
@@ -342,6 +341,10 @@ function removeHardMonstersClass() {
     }
 }
 
+
+// Selecting monster to fight
+let monsterToFight;
+
 function easyMonster() {
     monsterField.style.display = "block";
     removeHardMonstersClass();
@@ -349,12 +352,8 @@ function easyMonster() {
     monsterButton.forEach(function (e) {
         e.classList.add("easyMonsters");
     })
-    let easyPower = monsters.map(e => e.power * 0.5);
-    let charAtk = atk;
     console.log(monsterButton);
-    
     const monsterButtons = document.querySelectorAll(".monsterButton.easyMonsters");
-
     monsterButtons.forEach((button, index) => {
         button.addEventListener("click", () => {
             handleMonsterButtonClick(index);
@@ -363,12 +362,9 @@ function easyMonster() {
 
     function handleMonsterButtonClick(index) {
         console.log(`Button at index ${index} clicked.`);
-        // Now you can use the index as needed
-        // For example, you can access the corresponding monster in the monsters array
         const clickedMonster = monsters[index];
-        console.log("Clicked monster:", clickedMonster);
+        monsterToFight = clickedMonster.power;
     }
-
 }
 
 function mediumMonster() {
@@ -387,4 +383,11 @@ function hardMonster() {
     monsterButton.forEach(function (element) {
         element.classList.add("hardMonsters")
     })
+}
+
+
+function fighting() {
+    if (health >= monsterToFight) {
+
+    }
 }
