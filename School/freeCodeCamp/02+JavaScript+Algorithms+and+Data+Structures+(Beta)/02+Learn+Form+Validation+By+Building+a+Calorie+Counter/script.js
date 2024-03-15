@@ -1,11 +1,12 @@
 const calorieCounter = document.getElementById('calorie-counter');
-const budgetNumberInput = document.getElementById('budget');
+const budgetNumberInput = document.querySelector('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
 const clearButton = document.getElementById('clear');
 const output = document.getElementById('output');
 let isError = false;
 
+/*Even though you set an input element to be a number, JavaScript receives a string value. You need to write a function to clean the string value and ensure you have a number. */
 function cleanInputString(str) {
   const regex = /[+-\s]/g;
   return str.replace(regex, '');
@@ -48,6 +49,7 @@ function calculateCalories(e) {
   const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
   const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
   const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
+  console.log([budgetNumberInput]);
 
   if (isError) {
     return;
@@ -65,6 +67,7 @@ function calculateCalories(e) {
   `;
 
   output.classList.remove('hide');
+  
 }
 
 function getCaloriesFromInputs(list) {
