@@ -7,6 +7,14 @@ app.get("/", (req, res) => {
     console.log(req.rawHeaders)
 })
 
+app.get("/about", (req, res) => {
+    res.send("THis is the about page")
+})
+
+app.post("/register", (req, res) => {
+    res.sendStatus(201);
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on PORT: ${PORT}`);
 })
