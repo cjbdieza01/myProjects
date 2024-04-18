@@ -24,7 +24,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-  console.log(req);
   console.log(req.body);
 })
 
