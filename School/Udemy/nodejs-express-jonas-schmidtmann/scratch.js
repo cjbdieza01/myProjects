@@ -1,7 +1,9 @@
-const myNumber = [2, 4, 6, 8, 10];
-const doubleNumber = myNumber.map(number => {
-    return number*2;
-})
+const person = {
+    firstName: "Ace",
+    lastName: "Lee",
+    age: "31",
+    gender: "Male"
+};
 
-console.log(myNumber);
-console.log(doubleNumber);
+const {firstName : name1, lastName : name2} = person;
+console.log(name2);
