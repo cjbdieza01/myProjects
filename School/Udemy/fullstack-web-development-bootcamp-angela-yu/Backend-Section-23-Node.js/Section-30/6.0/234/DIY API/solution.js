@@ -23,6 +23,7 @@ app.get("/jokes/:id", (req, res) => {
 //Filter jokes by type
 app.get("/filter", (req, res) => {
   const type = req.query.type;
+  console.log(req.query)
   const filteredActivities = jokes.filter((joke) => joke.jokeType === type);
   res.json(filteredActivities);
 });
