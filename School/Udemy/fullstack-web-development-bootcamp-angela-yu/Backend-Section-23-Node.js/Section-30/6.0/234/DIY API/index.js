@@ -13,13 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/random/", (req, res) => {
   const result = Math.floor(Math.random() * jokes.length);
   res.send(jokes[result]);
-  
+
 })
 
 //2. GET a specific joke
 app.get("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  console.log(typeof(id));
+  console.log(typeof (id));
   console.log(req.params.id)
   const foundJoke = jokes.find(j => j.id === id)
   res.send(foundJoke)

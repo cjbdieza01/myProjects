@@ -6,11 +6,8 @@ import bodyParser from "body-parser";
 
 
 
-const app = express();
-const PORT = 8080;
-
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const API_URL = "https://secrets-api.appbrewery.com";
 
@@ -18,10 +15,10 @@ const API_URL = "https://secrets-api.appbrewery.com";
 app.get("/", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "/random")
-        
+
         res.render("index.ejs", {
-            secret : result.data.secret,
-            user : result.data.username
+            secret: result.data.secret,
+            user: result.data.username
         })
     } catch (error) {
         console.error(error.message)
