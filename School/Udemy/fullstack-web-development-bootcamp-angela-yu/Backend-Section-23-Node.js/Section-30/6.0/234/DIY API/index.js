@@ -3,42 +3,125 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
+// const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+function generateKey() {
+  return Math.floor(Math.random() * 999999);
+}
+let masterKey;
 
+app.get("/generate-key", (req, res) => {
+  masterKey = generateKey();
+  res.send(JSON.stringify(masterKey));
+  console.log(masterKey);
+});
 
 //1. GET a random joke
 app.get("/random/", (req, res) => {
   const result = Math.floor(Math.random() * jokes.length);
   res.send(jokes[result]);
-  
-})
+  console.log(masterKey);
+  console.log(typeof masterKey);
+});
 
 //2. GET a specific joke
 app.get("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  console.log(typeof(id));
-  console.log(req.params.id)
-  const foundJoke = jokes.find(j => j.id === id)
-  res.send(foundJoke)
-})
+  const foundJoke = jokes.find((j) => j.id === id);
+  res.send(foundJoke);
+});
 
 //3. GET a jokes by filtering on the joke type
-app.get("/jokes/:type")
-
-
+app.get("/filter", (req, res) => {
+  const type = req.query.type;
+  console.log(typeof type);
+  const filtered = jokes.filter((j) => j.jokeType === type);
+  console.log(filtered);
+  res.send(filtered);
+});
 
 //4. POST a new joke
 
+const jokeTypes = ["Puns", "Weather", "Science", "Math", "Wordplay", "Food"];
+app.post("/create-a-joke", (req, res) => {
+  const newId = jokes.length + 1;
+  const newJoke = {
+    id: newId,
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+  console.log(newJoke.jokeType);
+  if (jokeTypes.includes(newJoke.jokeType)) {
+    jokes.push(newJoke);
+    res.send(newJoke);
+    console.log(jokes.slice(-1));
+  } else {
+    res.json("Invalid Joke Type");
+  }
+});
+
 //5. PUT a joke
+app.put("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const updatedJoke = {
+    id: id,
+    jokeText: req.body.jokeText,
+    jokeType: req.body.jokeType,
+  };
+  console.log(updatedJoke);
+  const newJoke = jokes.findIndex((j) => j.id === updatedJoke.id);
+  jokes[newJoke] = updatedJoke;
+  res.json(jokes[newJoke]);
+});
 
 //6. PATCH a joke
 
+app.patch("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const jokeToUpdate = jokes.findIndex((j) => j.id === id);
+  console.log(jokeToUpdate);
+  console.log(jokes[jokeToUpdate]);
+  const { jokeType, jokeText } = req.body;
+  const patchJoke = {
+    // id: id,
+    jokeType: jokeType,
+    jokeText: jokeText,
+  };
+
+  jokes[jokeToUpdate] = patchJoke;
+
+  res.json(jokes[jokeToUpdate]);
+});
+
 //7. DELETE Specific joke
+app.delete("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const findIndex = jokes.findIndex((j) => j.id === id);
+  console.log(jokes[findIndex], "params result");
+  const deleteJoke = jokes.splice(findIndex, 1);
+  console.log(findIndex, "Find index, result");
+  console.log(deleteJoke, "Deleted Joke");
+});
 
 //8. DELETE All jokes
+app.delete("/jokes-delete", (req, res) => {
+  console.log(req.query.Key);
+  const userKey = parseInt(req.query.Key);
+  console.log(typeof(userKey), "userKey");
+  console.log(typeof(masterKey), "masterKey");
+  if (userKey === masterKey) {
+    jokes = [];
+    res.sendStatus(200);
+  } else {
+    res.status(404).json({
+      error: "You are not authorized this functionality!",
+      message: "Invalid Key!",
+    });
+  }
+  console.log(masterKey);
+});
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
