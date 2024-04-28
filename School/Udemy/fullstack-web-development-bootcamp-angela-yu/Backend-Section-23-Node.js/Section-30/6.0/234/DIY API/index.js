@@ -22,16 +22,29 @@ app.get("/generate-key", (req, res) => {
 app.get("/random/", (req, res) => {
   const result = Math.floor(Math.random() * jokes.length);
   res.send(jokes[result]);
+<<<<<<< HEAD
   console.log(masterKey);
   console.log(typeof masterKey);
 });
+=======
+
+})
+>>>>>>> 8e367412553a0ed032aa6e95c5449a844a6e202d
 
 //2. GET a specific joke
 app.get("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
+<<<<<<< HEAD
   const foundJoke = jokes.find((j) => j.id === id);
   res.send(foundJoke);
 });
+=======
+  console.log(typeof (id));
+  console.log(req.params.id)
+  const foundJoke = jokes.find(j => j.id === id)
+  res.send(foundJoke)
+})
+>>>>>>> 8e367412553a0ed032aa6e95c5449a844a6e202d
 
 //3. GET a jokes by filtering on the joke type
 app.get("/filter", (req, res) => {
