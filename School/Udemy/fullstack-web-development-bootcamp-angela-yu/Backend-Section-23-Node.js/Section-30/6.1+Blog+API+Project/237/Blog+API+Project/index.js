@@ -90,7 +90,6 @@ app.delete("/posts/:id", (req, res) => {
   const id = req.params.id;
   const findPost = posts.findIndex(p => p.id === id);
   const deleteIndex = posts.splice(findPost, 1);
-
   res.send(posts)
 })
 

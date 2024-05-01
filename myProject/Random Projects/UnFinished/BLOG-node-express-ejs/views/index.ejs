@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+
+<button class="new-button">New</button>
+
+<% data.forEach(data => { %>
+<div class="blog-container">
+  <h2><%= data.title %></h2>
+  <div class="category-container">
+    <span>Category: </span><span><%= data.category %></span>
+  </div>
+  <p><%= data.text %></p>
+  <div class="details-and-buttons">
+    <div class="blog-details">
+      <span>Author:<span class="details-name"><%= data.name %></span></span>
+      <span>Email: <span class="details-email"><%= data.email %></span></span>
+      <span>Date:</span>
+    </div>
+    <div class="options-container">
+      <button><a href="edit-blog/<%= data.id %>">Edit</a></button>
+      <button><a href="delete-blog/<%= data.id %>">Delete</a></button>
+    </div>
+  </div>
+</div>
+<% }) %> <%- include('partials/footer.ejs') %>

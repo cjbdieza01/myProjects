@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(220, 220, 220);
+}
+
+body .new-button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.blog-container {
+  max-width: 60%;
+  margin-bottom: 5%;
+}
+
+.blog-container,
+button {
+  border-radius: 10px;
+
+  padding: 10px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(255, 255, 255, 0.15);
+}
+
+.blog-container h2 {
+  font-size: 2rem;
+}
+
+.blog-container .category-container {
+  display: flex;
+  margin: 5px;
+}
+
+.blog-container .category-container > :first-child {
+  margin-right: 10px;
+}
+
+.blog-container p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(255, 255, 255, 0.15);
+}
+
+.details-and-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.blog-details {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 5px;
+}
+
+.details-email,
+.details-name {
+  margin-left: 5px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.options-container button {
+  margin: 3px;
+  padding: 3px;
+  background-color: rgb(220, 220, 220);
+  border: none;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(255, 255, 255, 0.15);
+}
+
+#form-container, .form-container {
+  width: 50%;
+  margin-top: 5%;
+}
+
+#edit-blog-form,
+#new-blog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container, #form-container,
+label,
+input,
+textarea,
+button {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(255, 255, 255, 0.15);
+}

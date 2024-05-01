@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.form-container {
+  width: 50%;
+  padding: 30px;
+
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
