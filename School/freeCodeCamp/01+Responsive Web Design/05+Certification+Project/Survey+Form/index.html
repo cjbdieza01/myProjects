@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1 id="title">FORM</h1>
-    <p id="description"></p>
+    <p id="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui
+      laudantium commodi laborum, doloribus numquam fugiat quidem sequi ea
+      possimus delectus aliquid quas nisi blanditiis tempora, eaque sed, omnis
+      facilis!
+    </p>
     <form action="" id="survey-form">
-        <input id="name" type="text" required>
-        <input id="email" type="email" required>
-        <input id="number" type="number" min="8" max="16">
-        <input type="number" name="number" id="number">
+      <label for="name" id="name-label"
+        >Name:
+        <input id="name" type="text" required placeholder="Enter your name"
+      /></label>
+
+      <label for="email" id="email-label"
+        >Email:
+        <input
+          id="email"
+          type="email"
+          required
+          placeholder="Enter a valid email"
+      /></label>
+
+      <label for="number" id="number-label"></label>
+      <input
+        id="number"
+        type="number"
+        min="8"
+        max="16"
+        placeholder="Enter your number"
+      />
+      <fieldset class="fieldset-1">
+        <select name="" id="dropdown">
+          <option value="1">Option-1</option>
+          <option value="2">Option-2</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"
+          ><input
+            id="personal-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+            checked
+          />
+          Personal</label
+        >
+        <label for="business-account"
+          ><input
+            id="business-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+          />
+          Business</label
+        >
+      </fieldset>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button type="submit"></button>
     </form>
-    
-</body>
+  </body>
 </html>
