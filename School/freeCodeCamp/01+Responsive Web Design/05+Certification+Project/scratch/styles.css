@@ -1,0 +1,25 @@
+button {
+  position: relative;
+  cursor: pointer;
+}
+
+button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}

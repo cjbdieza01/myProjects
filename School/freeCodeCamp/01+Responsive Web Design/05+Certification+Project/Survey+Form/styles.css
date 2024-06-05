@@ -1,20 +1,162 @@
-h1, p {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  /* THEME - 1 - SOFT GRAY */
+  /* background colors */
+  --light-gray: #e0e0e0;
+  --dark-gray: #c9c9c9;
+  /* shadow colors */
+  --shadow-dark1: #a3a3a3;
+  --shadow-light1: #ffffff;
+  /* accent colors */
+  --soft-blue: #76baff;
+  --soft-green: #6bffb5;
+
+  /* THEME - 2 - WARM BEIGE */
+  /* background colors */
+  --light-beige: #f5f0e6;
+  --dark-beige: #e2d5c9;
+  /* shadow-colors */
+  --shadow-dark2: #b5a89f;
+  --shadow-light2: #ffffff;
+  /* accent colors */
+  --soft-coral: #ffa88d;
+  --soft-mint: #a8ffbd;
+
+  /* THEME - 3 - COOL BLUE */
+  /* background-colors */
+  --light-blue: #dfeffc;
+  --dark-blue: #c1d3e0;
+  /* shadow colors */
+  --shadow-dark3: #9aaabb;
+  --shadow-light3: #ffffff;
+  /* accent colors */
+  --soft-teal: #76d7c4;
+  --soft-yellow: #f7e490;
+
+  /* THEME - 4 - SOFT PINK */
+  /* background colors */
+  --light-pink: #f8e1e7;
+  --dark-pink: #e4c5cd;
+  /* shadow colors */
+  --shadow-light4: #b79ea3;
+  --shadow-light4: #ffffff;
+  /* accent colors */
+  --soft-lavander: #c8a6d1;
+  --soft-peach: #ffcdab;
+}
+
+html {
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+  color: #669;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e0e0;
+}
+
+header {
   text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  width: 60%;
+}
+
+h1 {
+  font-weight: 800;
 }
 
 form {
-  margin: 0 auto;
-  min-width: 50%;
-  max-width: 600px;
-  min-width: 400px;
+  box-shadow: 10px 10px 20px #a3a3a3, -10px -10px 20px #ffffff;
+  margin: 2rem auto;
+  max-width: 60%;
+  min-width: 300px;
+  border-radius: 15px;
+  padding: 5px;
 }
 
-#name-label, #email-label, #number-label {
+fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  margin: 20px 10px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+}
+
+#name-label,
+#email-label,
+#number-label {
+  display: block;
+  margin: 20px 10px;
+}
+
+#name,
+#email,
+#number {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
+  height: 20px;
+  font-size: 0.8rem;
+  padding: 0 15px;
 }
 
 input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 6px 6px 12px #c9c9c9, inset -6px -6px 12px #ffffff;
+}
+
+select {
+  box-shadow: inset 6px 6px 12px #c9c9c9, inset -6px -6px 12px #ffffff;
+  border: none;
+  height: 40px;
+  font-size: 0.8rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  color: #000000;
+  margin: auto 3px;
+  box-shadow: none;
+}
+
+textarea {
+  border: none;
+  font-size: 1rem;
+  padding: 10px;
+  outline: none;
   width: 100%;
+  box-shadow: inset 6px 6px 12px #c9c9c9, inset -6px -6px 12px #ffffff;
+}
+
+input[type="submit"] {
+  box-shadow: unset;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #76baff; /* Soft Blue */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px auto 20px auto;
+  display: block;
+  width: 50%;
+  height: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+
+#submit:hover {
+  background-color: #6bffb5;
+  box-shadow: none;
 }

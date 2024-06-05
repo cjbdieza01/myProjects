@@ -1,26 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <h1 id="title">
-                Survey:
-            </h1>
-            <p id="description">
-                Thank you for taking the time to help us improve our platform.
-            </p>
-        </header>
-        <form action="" id="surver-form">
-            <div class="form-group">
-                
-            </div>
-        </form>
+      <header class="header">
+        <h1 id="title">Survey:</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve our platform.
+        </p>
+      </header>
+      <form action="" id="surver-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="formControl"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="formControl"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Number</label>
+          <input
+            type="text"
+            name="number"
+            id="number"
+            class="formControl"
+            placeholder="Enter your number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Address<span class="clue">(Optional)</span></label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            class="formControl"
+            placeholder="Enter your address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p id="quest">Which option best describe your current role?</p>
+          <select name="role" id="dropdown" class="form-control1" required>
+            <option value="" disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="employee">Employee</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p id="quest">How you come to know about us?</p>
+          <label for="">
+            <input type="radio" name="source" value="friends" checked />Friends
+          </label>
+          <label for="">
+            <input type="radio" name="source" value="tv-adds" />TV adds
+          </label>
+          <label for="">
+            <input type="radio" name="source" value="social-media" />Social
+            Media
+          </label>
+          <label for="">
+            <input type="radio" name="source" value="newspapers" />Newspapers
+          </label>
+          <label for="">
+            <input type="radio" name="source" value="other" />Other
+          </label>
+        </div>
+        <div class="form-group">
+          <p id="quest">Would you like to see improvement?</p>
+          <label for="">
+            <input
+              type="checkbox"
+              name="prefer"
+              class="checkbox"
+              value="back-end-dev"
+            />Back-end Developer
+          </label>
+          <label for="">
+            <input
+              type="checkbox"
+              name="prefer"
+              class="checkbox"
+              value="app-dev"
+            />Android app Development
+          </label>
+          <label for="">
+            <input
+              type="checkbox"
+              name="prefer"
+              class="checkbox"
+              value="engineering"
+            />Software Engineering
+          </label>
+          <label for="">
+            <input
+              type="checkbox"
+              name="prefer"
+              class="checkbox"
+              value="other"
+            />Other
+          </label>
+        </div>
+        <div class="form-group">
+          <p id="quest">Give us your Feedback</p>
+          <textarea
+            name="feedback"
+            id="feedback"
+            cols="30"
+            rows="5"
+            class="textarea"
+            placeholder="Enter your feedback here"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="btn">Submit</button>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>

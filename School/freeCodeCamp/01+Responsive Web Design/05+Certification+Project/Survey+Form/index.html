@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title">FORM</h1>
-    <p id="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui
-      laudantium commodi laborum, doloribus numquam fugiat quidem sequi ea
-      possimus delectus aliquid quas nisi blanditiis tempora, eaque sed, omnis
-      facilis!
-    </p>
+    <header>
+      <h1 id="title">Survey</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve our platform!
+      </p>
+    </header>
 
     <form action="" id="survey-form">
       <label for="name" id="name-label"
@@ -30,17 +29,63 @@
           placeholder="Enter a valid email"
       /></label>
 
-      <label for="number" id="number-label">Number:<input
-        id="number"
-        type="number"
-        min="8"
-        max="16"
-        placeholder="Enter your number"
+      <label for="number" id="number-label"
+        >Number:<input
+          id="number"
+          class
+          type="number"
+          min="8"
+          max="16"
+          placeholder="Enter your number"
       /></label>
-      
-      <fieldset class="fieldset-1">
+
+      <fieldset>
+        <legend>Would you like to see improvement?</legend>
+        <label for="back-end">
+          <input
+            id="back-end"
+            type="checkbox"
+            name="prefer"
+            class="checkbox"
+            value="back-end-dev"
+          />Back-end Developer
+        </label>
+        <label for="android-app">
+          <input
+            id="android-app"
+            type="checkbox"
+            name="prefer"
+            class="checkbox"
+            value="app-dev"
+          />Android app Development
+        </label>
+        <label for="software-eng">
+          <input
+            id="software-eng"
+            type="checkbox"
+            name="prefer"
+            class="checkbox"
+            value="engineering"
+          />Software Engineering
+        </label>
+        <label for="other">
+          <input
+            id="other"
+            type="checkbox"
+            name="prefer"
+            class="checkbox"
+            value="other"
+          />Other
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Option</legend>
         <select name="" id="dropdown">
           <option value="1">Option-1</option>
+          <option value="2">Option-2</option>
+          <option value="2">Option-2</option>
+          <option value="2">Option-2</option>
           <option value="2">Option-2</option>
         </select>
       </fieldset>
@@ -53,6 +98,7 @@
             type="radio"
             name="account-type"
             class="inline"
+            value="personal"
             checked
           />
           Personal</label
@@ -62,13 +108,17 @@
             id="business-account"
             type="radio"
             name="account-type"
+            value="bussiness"
             class="inline"
           />
           Business</label
         >
       </fieldset>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <input type="submit" value="Submit" />
+      <fieldset>
+        <legend>Whrite a Comment:</legend>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
     </form>
   </body>
 </html>

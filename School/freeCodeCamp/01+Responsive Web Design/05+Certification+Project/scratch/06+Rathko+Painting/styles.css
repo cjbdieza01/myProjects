@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.frame {
+    width: 500px;
+    border: 50px solid black;
+}
+
+.canvas {
+    background: red;
+    height: 500px;
+    width: 400px;
+    margin: 20px auto;
+    
+}
+
+.one {
+    height: 150px;
+    width: 300px;
+    background-color: blue;
+    margin: 40px auto;
+    border: 2px solid black;
+
+}
