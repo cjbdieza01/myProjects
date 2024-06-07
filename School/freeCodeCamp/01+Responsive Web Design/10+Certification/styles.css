@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+
+:root {
+  --color-red: #ff0000;
+  --color-gold: #ffd700;
+  --color-green: #008000;
+  --opacity: 0.8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Reggae One", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  background-image: linear-gradient(
+      215deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 215, 0, 0.8),
+      rgba(0, 128, 0, 0.8)
+    ),
+    url(background_photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-size: 2.25rem; /* 36px (2.25 * 16px) */
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px (1.875 * 16px) */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px (1.5 * 16px) */
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px (1.25 * 16px) */
+}
+
+h5 {
+  font-size: 1.125rem; /* 18px (1.125 * 16px) */
+}
+
+h6 {
+  font-size: 1rem; /* 16px (1 * 16px) */
+}
+
+header {
+  width: 100%;
+  display: flex;
+}
+
+#logo {
+  width: max(30px, 15vw);
+  aspect-ratio: 10 / 3;
+  padding: 0.5rem;
+}
+
+main {
+  padding: 50px;
+}
+
+h1 {
+  font-weight: 1000;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+#tribute-link {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+figure {
+  width: 50%;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+figure #image {
+  max-width: 100%;
+  margin: 10px auto;
+  display: block;
+}
+
+figcaption {
+  font-size: 2rem;
+  margin: 10px auto;
+}
+
+.section-1 {
+  text-align: center;
+}
+
+.end {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+footer p {
+    display: block;
+}
+
+address .visit, #tribute-link {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
